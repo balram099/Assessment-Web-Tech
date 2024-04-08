@@ -1,0 +1,343 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sikhi Waheguru</title>
+  <style>
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f5f4f4;
+  transition: background-color 0.3s;
+}
+
+header {
+  display: flex;
+  align-items: center;
+  justify-content: start;
+  padding: 10px;
+  background-color: #00328f;
+  color: white;
+}
+
+.site-title {
+  margin-right: 20px;
+  font-size: 1.8rem;
+  font-weight: bold;
+  color: #ffffff;
+}
+
+a, a:hover, a:focus, a:active {
+  text-decoration: none;
+  color: inherit;
+}
+
+#logo {
+  width: 100px;
+  height: 50px;
+}
+
+#logo img {
+  max-width: 100%;
+  max-height: 100%;
+}
+
+nav {
+  display: flex;
+}
+
+nav a {
+  text-decoration: none;
+  color: white;
+  padding: 10px 20px;
+  margin: 0 10px;
+  background-color: #ff7b00;
+  border-radius: 5px;
+}
+
+.search-container {
+  display: flex;
+  align-items: center;
+}
+
+.search-container input[type="search"] {
+  padding: 5px;
+  font-size: 1rem;
+  border: none;
+  border-radius: 5px;
+}
+
+.search-container button {
+  background: none;
+  border: 1px solid #fff;
+  color: #fff;
+  padding: 5px 10px;
+  margin-left: 5px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+footer {
+  text-align: center;
+  padding: 10px;
+  background-color: #ff7b00;
+}
+
+footer p {
+  margin: 0;
+}
+
+.breadcrumb {
+  padding: 10px 20px;
+  background-color: #f5f4f4;
+}
+
+/* Main Content Styling */
+main {
+  margin-bottom: 2em; /* Space between sections */
+  padding: 20px; /* Padding inside each section */
+  background-color: #ffebcd; /* Light orange background for each section */
+  border: 1px solid #003366; /* Dark blue border */
+  border-radius: 8px; /* Rounded corners for the sections */
+  transition: background-color 0.3s, border-color 0.3s; /* Smooth transitions for dark mode */
+}
+.main-content {
+  margin-bottom: 2em; /* Space between sections */
+  padding: 20px; /* Padding inside each section */
+  background-color: #ffebcd; /* Light orange background for each section */
+  border: 1px solid #003366; /* Dark blue border */
+  border-radius: 8px; /* Rounded corners for the sections */
+  transition: background-color 0.3s, border-color 0.3s; /* Smooth transitions for dark mode */
+}
+
+.content-title {
+  text-align: left; /* Aligns title to the left */
+  margin-bottom: 20px; /* Space below the title */
+  font-size: 2.5rem;
+  color: #003366; /* Adjusted title color to match the image */
+}
+
+.content-section {
+  position: relative; /* Relative position for content section */
+  padding-bottom: 20px; /* Space at the bottom of each section */
+}
+
+.image-block {
+  text-align: center; /* Center align the image */
+  margin-bottom: 20px; /* Space between image and text */
+}
+
+.image-block img {
+  max-width: 100%; /* Ensures image is not wider than its container */
+  max-height: 300px; /* Set a max-height that fits your layout */
+  height: auto; /* Keeps the aspect ratio of the image */
+  display: block; /* Removes any extra space beneath the image */
+  margin: 0 auto; /* Centers the image within the block */
+}
+
+
+.text-block {
+  text-align: justify; /* Justified text for better readability */
+  font-size: 1rem; /* Adjusted text size */
+  line-height: 1.6; /* Adjusted line height for better readability */
+}
+
+/* If you have specific font styles or sizes for headings, add them here */
+h2 {
+  font-size: 1.5rem; /* Example size for h2 headings */
+  margin-bottom: .5rem; /* Space below h2 headings */
+}
+
+@media (max-width: 768px) {
+  .image-block img {
+    max-height: 200px; /* Smaller max-height for smaller screens */
+  }
+}
+
+  .image-block,
+  .text-block {
+    width: 100%; /* Full width for image and text blocks on smaller screens */
+  }
+
+/* Dark Mode Styles */
+body.dark-mode {
+  background-color: #121212; /* Dark background for the body */
+  color: #ffffff; /* Light color for the general text for visibility */
+}
+
+body.dark-mode header,
+body.dark-mode footer,
+body.dark-mode .breadcrumb {
+  background-color: #333; /* Darker background for these sections */
+  color: #ccc; /* Light text color for visibility */
+}
+body.dark-mode main {
+  background-color: #121212; /* Darker background for the main content in dark mode */
+}
+
+body.dark-mode nav a,
+body.dark-mode .search-container button {
+  background-color: #555; /* Dark background for buttons */
+  color: #ccc; /* Light text color for visibility */
+}
+
+body.dark-mode .search-container input[type="search"] {
+  background-color: #555; /* Dark background for search input */
+  color: #ccc; /* Light text color for visibility */
+  border-color: #777; /* Light border color for visibility */
+}
+
+body.dark-mode a,
+body.dark-mode a:hover,
+body.dark-mode a:focus,
+body.dark-mode a:active {
+  color: #88C0D0; /* Ensures that links are visible in dark mode */
+}
+
+body.dark-mode .content-title,
+body.dark-mode .text-block h2 {
+  color: #88C0D0; /* Lighter color for headings for better visibility in dark mode */
+}
+
+  </style>
+</head>
+<body>
+    <header>
+      <a href="The Gurus.html">
+        <div id="logo">
+          <img src="Khanda3.png" alt="Khanda Logo" />
+        </div>
+      </a>
+  
+      <a href="homepage1.html" class="site-title-link">
+        <div class="site-title">Sikhi Waheguru</div>
+      </a>
+  
+      <nav>
+        <a href="homepage1.html">History of Sikhism</a>
+        <a href="The Gurus.html">The Gurus</a>
+        <a href="Philosophy & Practices.html">Philosophy & Practices</a>
+        <a href="Scriptures & Literature.html">Scriptures & Literature</a>
+        <a href="Community.html">Community</a>
+      </nav>
+  
+      <div class="search-container">
+        <input type="search" id="site-search" name="q"
+               aria-label="Search through site content" placeholder="Search...">
+        <button onclick="search()">Q</button>
+      </div>
+  
+      <button class="dark-mode-toggle" onclick="toggleDarkMode()">🌙</button>
+    </header>
+  
+    <div class="breadcrumb">
+      <a href="homepage1.html">Home</a> > <a href="Philosophy & Practices.html">Philosophy & Practices</a>
+    </div>
+  </body>
+
+<main class="main-content">
+    <div class="content-section">
+        <div class="image-block">
+            <img src="Khanda1.png" alt="Philosophy and Practices">
+        </div>
+        <div class="text-block">
+            <h2>Sikh Philosophy</h2>
+            <p>Sikhism, founded in the 15th century by Guru Nanak in the Punjab region, teaches the oneness of an eternal God and is based on the teachings of ten Gurus, encapsulated within the revered Guru Granth Sahib. This philosophy emphasizes the equality of all humans, rejecting discrimination based on caste, creed, or gender, and promotes living an ethical life of honesty, hard work, and community service. Sikhs are encouraged to lead lives that balance spiritual pursuits with worldly responsibilities, embodying the virtues of selflessness and service through practices like Langar, the communal meal served to all visitors of Sikh temples (Gurdwaras), irrespective of their background.</p>
+            <p>At the heart of Sikhism is the Guru Granth Sahib, which contains hymns and poetry that advocate for devotion to God, moral integrity, and social justice. It guides followers to practice remembrance of God, earn a living through honest means, and share with the less fortunate, fostering a sense of community and universal brotherhood. The Sikh tradition, with its rich history of standing up against oppression and advocating for human rights, inspires adherents to contribute positively to society and the world at large, striving for a harmonious existence that transcends mere tolerance to embrace deep respect and love for all.</p>
+        </div>
+    </div>
+
+    <div class="content-section">
+        <div class="text-block">
+            <h2>The Three Pillars of Sikhism</h2>
+            <p>The Three Pillars of Sikhism are fundamental principles that guide the lives of Sikhs towards spiritual and moral living. The first pillar, Naam Japna, emphasizes the importance of keeping God in mind at all times. It suggests that by remembering and meditating on God's name, individuals can develop a deeper spiritual connection and find true fulfillment in life. This practice encourages a continual awareness of the divine, guiding Sikhs to live in a state of constant remembrance and devotion to God.</p>
+            <p>The second and third pillars, Kirat Karni and Vand Chakna focus on ethical living and community welfare. Kirat Karni advocates for earning one's livelihood through honest and hard work. It teaches that living a life of integrity and positively contributing to society is crucial. Vand Chakna, on the other hand, underscores the importance of sharing with those in need. It promotes a spirit of generosity, ensuring that no one in the community is left wanting. Together, these pillars form the foundation of Sikhism, encouraging followers to lead lives that are spiritually connected, ethically grounded, and community-oriented.</p>
+        </div>
+    </div>
+  
+    <div class="content-section">
+        <div class="text-block">
+            <h2>The Five Ks</h2>
+            <p>The Five Ks are special symbols worn by baptized Sikhs that each represent an important part of their faith and way of life. These items include Kesh, which is keeping their hair uncut to show respect for the natural way of life Kara, a steel bracelet that reminds them of eternity and their connection to God Kanga, a wooden comb that represents cleanliness and the importance of looking after oneself Kachera, cotton undergarments that signify self-control and modesty and Kirpan, a ceremonial sword that symbolizes a Sikh's duty to stand up against injustice and protect everyone, regardless of their background.</p>
+            <p>These Five Ks are not just items of clothing or accessories but carry deep meanings. The Kesh shows a commitment to live naturally and respect the body God has given. The Kara is a constant reminder of the Sikh's bond with their community and God, representing an unbreakable connection. The Kanga encourages cleanliness, which is essential in their faith. The Kachera represents a life of discipline and control, important for spiritual growth. Lastly, the Kirpan emphasizes the responsibility to protect the innocent and fight against wrongs, showing their commitment to justice and righteousness. Together, these symbols form a core part of a Sikh's identity, reminding them of their beliefs and duties every day.</p>
+        </div>
+        <div class="image-block">
+            <img src="The 5.png" alt="The Five Ks">
+        </div>
+    </div>
+  
+    <div class="content-section">
+        <div class="text-block">
+            <h2>Beliefs</h2>
+            <p>Sikhism, a religion founded in the Punjab region of India, deeply values ethical living and moral conduct. It encourages its followers to lead lives filled with honesty, compassion, and humility. Sikhs are taught to treat everyone equally, without regard to caste distinctions, which were prevalent in India. This principle promotes a sense of fairness and unity among people, emphasizing that everyone should be treated with respect and kindness. The religion teaches its adherents to strive for a high moral standard in all aspects of their lives, making ethics a central part of their daily routine.</p>
+            <p>Sikhism advocates for a society where individuals act with integrity and a strong sense of morality. It believes that by embodying these virtues, people can create a just and equitable community. Sikhs are encouraged to reject selfishness and embrace a life of service to others, which includes helping those in need and standing up for justice. Through such teachings, Sikhism aims to foster a world where fairness, equality, and compassion prevail, guiding individuals towards leading meaningful and ethical lives.</p>
+        </div>
+    </div>
+
+    <div class="content-section">
+        <div class="text-block">
+            <h2>Kirtan</h2>
+            <p>Kirtan is a special way Sikhs express their faith, where they sing hymns from their holy book, the Guru Granth Sahib. This isn't just any kind of singing; it's a form of worship that is very meaningful to them. Imagine singing your favourite song but in a way that also brings you closer to what you believe in. That's what Kirtan is like for Sikhs. They often use musical instruments like the harmonium, which is a type of keyboard, and the tabla, a kind of drum, to make the music even more beautiful.</p>
+            <p>The reason music and poetry are so important in Sikh worship is that they believe these are gifts from the divine that can help lift and purify the soul. It's like how a good song can make you feel better when you're sad for Sikhs, these spiritual songs do even more by helping them feel closer to the divine. By combining music with the powerful words of their Gurus, Kirtan becomes a way to connect deeply with their faith and with each other.</p>
+        </div>
+    </div>
+    
+  </main>
+  
+  
+  <footer>
+    <p>&copy; 2024 Sikhi Waheguru. All Rights Reserved.</p>
+  </footer>
+
+  <script>
+    // Toggle dark mode and update the button icon
+    function toggleDarkMode() {
+      var body = document.body;
+      body.classList.toggle('dark-mode');
+      var toggleButton = document.querySelector('.dark-mode-toggle');
+      if (body.classList.contains('dark-mode')) {
+        toggleButton.textContent = '☀️'; // Sun icon for light mode
+      } else {
+        toggleButton.textContent = '🌙'; // Moon icon for dark mode
+      }
+    }
+  
+    // Smooth Scrolling for Navigation Links
+    document.addEventListener('DOMContentLoaded', function() {
+      document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener('click', function(e) {
+          e.preventDefault();
+          document.querySelector(this.getAttribute('href')).scrollIntoView({
+            behavior: 'smooth'
+          });
+        });
+      });
+  
+      // Content Filter/Search
+      const searchInput = document.getElementById('site-search');
+  
+      searchInput.addEventListener('keyup', function() {
+        const query = this.value.toUpperCase();
+        const contentSections = document.querySelectorAll('.main-content .content-section');
+  
+        contentSections.forEach(section => {
+          const text = section.querySelector('.text-block').textContent || section.querySelector('.text-block').innerText;
+          if (text.toUpperCase().indexOf(query) > -1) {
+            section.style.display = "";
+          } else {
+            section.style.display = "none";
+          }
+        });
+      });
+    });
+  </script>
+  
+</body>
+</html>

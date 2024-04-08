@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sikhi Waheguru</title>
+  <style>
+    /* CSS Reset to remove default browser styling */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    /* Set the font for the entire page */
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f5f4f4; /* Light grey background */
+      transition: background-color 0.3s; /* Smooth transition for dark mode */
+    }
+
+    /* Header styling */
+    header {
+      display: flex;
+      align-items: center;
+      justify-content: start;
+      padding: 10px;
+      background-color: #00328f; /* Dark header background */
+      color: white;
+    }
+    
+    .site-title {
+      margin-right: 20px;
+      font-size: 1.8rem;
+      font-weight: bold;
+      color: #ffffff;
+    }
+
+    a, a:hover, a:focus, a:active {
+      text-decoration: none;
+      color: inherit; /* This ensures that the anchor tag inherits the color from its parent */
+    }
+
+    #logo {
+      width: 100px; /* Adjust as needed */
+      height: 50px; /* Adjust as needed */
+    }
+
+    #logo img {
+      max-width: 100%;
+      max-height: 100%;
+    }
+
+    nav {
+      display: flex;
+    }
+
+    nav a {
+      text-decoration: none;
+      color: white;
+      padding: 10px 20px;
+      margin: 0 10px;
+      background-color: #ff7b00;
+      border-radius: 5px; /* Rounded corners for buttons */
+    }
+
+    .search-container {
+      display: flex;
+      align-items: center;
+    }
+
+    .search-container input[type="search"] {
+      padding: 5px;
+      font-size: 1rem;
+      border: none;
+      border-radius: 5px;
+    }
+
+    .search-container button {
+      background: none;
+      border: 1px solid #fff;
+      color: #fff;
+      padding: 5px 10px;
+      margin-left: 5px;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+    footer {
+      text-align: center; /* Center align footer content */
+      padding: 10px;
+      background-color: #ff7b00; /* Orange footer background */
+    }
+    footer p {
+      margin: 0; /* Remove default paragraph margin */
+    }
+    /* Main Content styling */
+    main {
+      padding: 20px; /* Padding around the main content */
+      background-color: #ffffff; /* Light background for the content area */
+      transition: background-color 0.3s; /* Smooth transition for dark mode */
+    }
+
+    main section {
+      margin-bottom: 2em; /* Space between sections */
+      padding: 20px; /* Padding inside each section */
+      background-color: #ffebcd; /* Light orange background for each section */
+      border: 1px solid #003366; /* Dark blue border */
+      border-radius: 8px; /* Rounded corners for the sections */
+      transition: background-color 0.3s, border-color 0.3s; /* Smooth transitions for dark mode */
+    }
+
+    main section h2 {
+      margin-bottom: 0.5em; /* Space below the heading */
+      color: #003366; /* Dark blue color for the heading */
+      font-size: 1.75rem; /* Size of the heading */
+      transition: color 0.3s; /* Smooth transition for dark mode */
+    }
+
+    main section p {
+      font-size: 1rem; /* Size of the paragraph text */
+      line-height: 1.6; /* Line height for readability */
+      color: #333; /* Darker color for the text */
+      margin-bottom: 1em; /* Space between paragraphs */
+      transition: color 0.3s; /* Smooth transition for dark mode */
+    }
+
+    /* Dark Mode Styles */
+    body.dark-mode {
+      background-color: #121212; /* Dark background for the body */
+    }
+
+    body.dark-mode header {
+      background-color: #333; /* Darker header background */
+    }
+
+    body.dark-mode nav a {
+      background-color: #555;
+    }
+
+    body.dark-mode .search-container input[type="search"],
+    body.dark-mode .search-container button {
+      border-color: #777;
+      background-color: #555;
+      color: white;
+    }
+    body.dark-mode main {
+      background-color: #121212; /* Darker background for the main content in dark mode */
+    }
+
+    body.dark-mode main section {
+      background-color: #333; /* Darker background for sections in dark mode */
+      border-color: #444; /* Lighter border in dark mode for contrast */
+    }
+
+    body.dark-mode main section h2 {
+      color: #ddd; /* Lighter color for the heading in dark mode for visibility */
+    }
+
+    body.dark-mode main section p {
+      color: #ccc; /* Lighter color for the text in dark mode for visibility */
+    }
+    body.dark-mode footer {
+      background-color: #333; /* Dark background for footer */
+      color: #ccc;
+    }
+
+  </style>
+</head>
+<body>
+  <header>
+    <a href="homepage1.html">
+      <div id="logo">
+        <img src="Khanda3.png" alt="Khanda Logo" />
+      </div>
+    </a>
+
+    <a href="homepage1.html" class="site-title-link">
+      <div class="site-title">Sikhi Waheguru</div>
+    </a>
+    <nav>
+      <a href="homepage1.html">History of Sikhism</a>
+      <a href="The Gurus.html">The Gurus</a>
+      <a href="Philosophy & Practices.html">Philosophy & Practices</a>
+      <a href="Scriptures & Literature.html">Scriptures & Literature</a>
+      <a href="Community.html">Community</a>
+    </nav>
+    <div class="search-container">
+      <input type="search" id="site-search" name="q" aria-label="Search through site content" placeholder="Search...">
+      <button onclick="search()">Q</button>
+    </div>
+    <button class="dark-mode-toggle" onclick="toggleDarkMode()">🌙</button>
+  </header>
+    
+  <main>
+    <section id="History-of-Sikhism">
+      <h2 style="text-align: center;">History of Sikhism</h2>
+      <img src="guru.PNG" alt="The Gurus" style="display: block; margin: auto; width: 80%; max-width: 600px; height: auto;">
+    <p>
+      Sikhism is a faith that started in the Punjab area of India around the end of the 15th century, and its followers are called Sikhs. It began with a man named Guru Nanak, and over time, nine more Gurus added to his teachings. They believed in a special spirit that lived in each Guru, one after the other. When the last of these Gurus, Guru Gobind Singh, passed away, he passed this spirit into the Sikh holy book, the Guru Granth Sahib, making it the eternal guide for all Sikhs. Today, there are about 25 million Sikhs around the world, with most of them living in Punjab, India.
+    </p>
+    <p>
+      The story of Sikhism is filled with teachings from these ten Gurus, some of which sound more like legends. It all started with Guru Nanak, who taught people about living a good life filled with honesty and service to others. His followers were called Sikhs. After him, nine more Gurus led the community, each one adding to its beliefs and practices until 1708. Now, Sikhs look to the Guru Granth Sahib for guidance. This book is really special to them; it's filled with songs and writings not just from the Gurus but also from other holy figures. It talks about how to experience the divine and how to live a spiritually rich life. In Sikh places of worship, this book is treated with the utmost respect, reminding Sikhs of its importance in their lives.
+    </p>
+    <p>
+      Over the years, the Sikh Gurus helped their community grow stronger and more influential. This journey reached a high point in 1699 when Guru Gobind Singh created the Khalsa, a group of initiated Sikhs who live by strict principles and practices laid out in the Sikh code of conduct.
+    </p>
+    <p>
+      One of the early leaders, Guru Arjan, made Amritsar the heart of the Sikh world and put together the first official Sikh scripture. However, his faith put him in danger, and he was executed in 1606. Following him, the community had to defend itself and even fought battles to protect their beliefs, especially against attempts by others to convert them by force.
+    </p>
+    <p>
+      The last of the human Gurus, Gobind Singh, made a big change by creating the Khalsa, turning the Sikhs into a community ready to defend their faith. This included special initiation rituals and symbols that give Sikhs their unique identity.  
+    </p>
+    <p>
+      After the time of the Gurus, leaders like Banda Singh Bahadur took up the mantle, leading the Sikhs in battles for their freedom. By the late 18th century, Sikhs, under Maharaja Ranjit Singh, had carved out their own kingdom in Punjab. Ranjit Singh was a skilled leader who managed a diverse kingdom and showed respect for different religions, even though Sikhs were not the majority.
+    </p>
+    <p>
+      Sikhism is more than just a set of beliefs; it's a story of resilience, community, and a deep commitment to living a life full of honesty, service, and spiritual depth.
+    </p>
+    </section>
+  </main>
+  
+  <footer>
+    <p>&copy; 2024 Sikhi Waheguru. All Rights Reserved.</p>
+  </footer>
+
+  <script>
+    // Toggle dark mode and update the button icon
+    function toggleDarkMode() {
+      var body = document.body;
+      body.classList.toggle('dark-mode');
+      var toggleButton = document.querySelector('.dark-mode-toggle');
+      if (body.classList.contains('dark-mode')) {
+        toggleButton.textContent = '☀️'; // Sun icon for light mode
+      } else {
+        toggleButton.textContent = '🌙'; // Moon icon for dark mode
+      }
+    }
+  
+    // Smooth Scrolling for Navigation Links
+    document.addEventListener('DOMContentLoaded', function() {
+      document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener('click', function(e) {
+          e.preventDefault();
+          document.querySelector(this.getAttribute('href')).scrollIntoView({
+            behavior: 'smooth'
+          });
+        });
+      });
+  
+      // Content Filter/Search
+      const searchInput = document.getElementById('site-search');
+  
+      searchInput.addEventListener('keyup', function() {
+        const query = this.value.toUpperCase();
+        const contentSections = document.querySelectorAll('.main-content .content-section');
+  
+        contentSections.forEach(section => {
+          const text = section.querySelector('.text-block').textContent || section.querySelector('.text-block').innerText;
+          if (text.toUpperCase().indexOf(query) > -1) {
+            section.style.display = "";
+          } else {
+            section.style.display = "none";
+          }
+        });
+      });
+    });
+  </script>
+  
+</body>
+</html>

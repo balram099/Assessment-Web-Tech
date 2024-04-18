@@ -1,0 +1,310 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sikhi Waheguru</title>
+  <style>
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f5f4f4;
+  transition: background-color 0.3s;
+}
+
+header {
+  display: flex;
+  align-items: center;
+  justify-content: start;
+  padding: 10px;
+  background-color: #00328f;
+  color: white;
+}
+
+.site-title {
+  margin-right: 20px;
+  font-size: 1.8rem;
+  font-weight: bold;
+  color: #ffffff;
+}
+
+a, a:hover, a:focus, a:active {
+  text-decoration: none;
+  color: inherit;
+}
+
+#logo {
+  width: 100px;
+  height: 50px;
+}
+
+#logo img {
+  max-width: 100%;
+  max-height: 100%;
+}
+
+nav {
+  display: flex;
+}
+
+nav a {
+  text-decoration: none;
+  color: white;
+  padding: 10px 20px;
+  margin: 0 10px;
+  background-color: #ff7b00;
+  border-radius: 5px;
+}
+
+.search-container {
+  display: flex;
+  align-items: center;
+}
+
+.search-container input[type="search"] {
+  padding: 5px;
+  font-size: 1rem;
+  border: none;
+  border-radius: 5px;
+}
+
+.search-container button {
+  background: none;
+  border: 1px solid #fff;
+  color: #fff;
+  padding: 5px 10px;
+  margin-left: 5px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+footer {
+  text-align: center;
+  padding: 10px;
+  background-color: #ff7b00;
+}
+
+footer p {
+  margin: 0;
+}
+
+.breadcrumb {
+  padding: 10px 20px;
+  background-color: #f5f4f4;
+}
+
+/* Main Content Styling */
+main {
+  margin-bottom: 2em; /* Space between sections */
+  padding: 20px; /* Padding inside each section */
+  background-color: #ffebcd; /* Light orange background for each section */
+  border: 1px solid #003366; /* Dark blue border */
+  border-radius: 8px; /* Rounded corners for the sections */
+  transition: background-color 0.3s, border-color 0.3s; /* Smooth transitions for dark mode */
+}
+.main-content {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: flex-start;
+  max-width: 1200px;
+  margin: 0 auto; /* Centers the content */
+  padding: 20px;
+}
+
+.content-title {
+  width: 100%;
+  text-align: center;
+  margin-bottom: 20px; /* Space below the title */
+  font-size: 2.5rem;
+}
+
+.content-section {
+  display: flex;
+  align-items: flex-start; /* Aligns items to the top of the container */
+  justify-content: space-between; /* Spaces out the items */
+  margin-bottom: 40px;
+}
+
+.text-block {
+  flex: 1;
+  padding-right: 20px; /* Space inside the text block */
+}
+
+.image-block {
+  flex: 1;
+  max-width: 200px; /* Adjust the max-width to control image size */
+  width: 100px; /* Change this value to your preferred height */
+  margin-right: 20px; /* Space between the image and the text */
+  padding-left: 20px; /* Adjusted padding for image block */
+}
+
+.image-block img {
+  width: auto; /* Adjusts image width automatically */
+  height: auto; /* Adjusts image height automatically */
+  max-width: 100%; /* Ensures image is not larger than its container */
+  max-height: 150px; /* Maximum height for the image */
+}
+
+@media (max-width: 768px) {
+  .content-section {
+    flex-direction: column; /* Stack image and text on top of each other */
+  }
+
+  .image-block,
+  .text-block {
+    width: 100%; /* Full width on smaller screens */
+    max-width: none;
+  }
+
+  .image-block {
+    margin-bottom: 20px; /* Space between image and text on smaller screens */
+  }
+}
+
+/* Dark Mode Styles */
+body.dark-mode {
+  background-color: #121212; /* Dark background for the body */
+  color: #ffffff; /* Light color for the general text for visibility */
+}
+
+body.dark-mode header,
+body.dark-mode footer,
+body.dark-mode .breadcrumb {
+  background-color: #333; /* Darker background for these sections */
+  color: #88C0D0; /* Light text color for visibility */
+}
+body.dark-mode main {
+  background-color: #121212; /* Darker background for the main content in dark mode */
+}
+
+body.dark-mode nav a,
+body.dark-mode .search-container button {
+  background-color: #555; /* Dark background for buttons */
+  color: #88C0D0; /* Light text color for visibility */
+}
+
+body.dark-mode .search-container input[type="search"] {
+  background-color: #555; /* Dark background for search input */
+  color: #88C0D0; /* Light text color for visibility */
+  border-color: #777; /* Light border color for visibility */
+}
+
+body.dark-mode a,
+body.dark-mode a:hover,
+body.dark-mode a:focus,
+body.dark-mode a:active {
+  color: #88C0D0; /* Ensures that links are visible in dark mode */
+}
+
+body.dark-mode .content-title,
+body.dark-mode .text-block h2 {
+  color: #88C0D0; /* Lighter color for headings for better visibility in dark mode */
+}
+</style>
+</head>
+
+<body>
+  <header>
+    <a href="The Gurus.html">
+      <div id="logo">
+        <img src="Khanda3.png" alt="Khanda Logo" />
+      </div>
+    </a>
+
+    <a href="index.html" class="site-title-link">
+      <div class="site-title">Sikhi Waheguru</div>
+    </a>
+
+    <nav>
+      <a href="index.html">History of Sikhism</a>
+      <a href="The Gurus.html">The Gurus</a>
+      <a href="Philosophy & Practices.html">Philosophy & Practices</a>
+      <a href="Scriptures & Literature.html">Scriptures & Literature</a>
+      <a href="Community.html">Community</a>
+    </nav>
+
+    <div class="search-container">
+      <input type="search" id="site-search" name="q"
+             aria-label="Search through site content" placeholder="Search...">
+      <button onclick="search()">Q</button>
+    </div>
+
+    <button class="dark-mode-toggle" onclick="toggleDarkMode()">🌙</button>
+  </header>
+
+  <div class="breadcrumb">
+    <a href="index.html">Home</a> > <a href="The Gurus.html">The Gurus</a> > <a href="Guru Guru Granth sahib Ji.html">Guru Granth Sahib J</a>
+  </div>
+</body>
+
+<main class="main-content">
+  <div class="content-section">
+    <div class="image-block">
+      <img src="guru granth sahib ji.PNG" alt="Guru Granth Sahib Ji">
+    </div>
+    <div class="text-block">
+      <h2>Guru Granth Sahib Ji</h2>
+      <p> Guru Gobind Singh Ji was a pivotal figure in Sikh history, taking on the mantle of Guru at a young age in 1675. He's known for his bravery, spiritual depth, and visionary leadership. His contributions to Sikhism are profound, including the founding of the Khalsa, a community of committed Sikhs, in 1699. This was a transformative moment, marking Sikhs not just by their faith but also by a distinct identity and way of life. Guru Gobind Singh Ji was also a poet and a warrior, embodying the dual path of spirituality and temporal duty. The Siri Guru Granth Sahib, the holy book of Sikhism, is a vast collection of 1,430 pages that includes teachings and songs. Guru Gobind Singh Ji played a crucial role in its history, declaring it as the eternal Guru of the Sikhs in 1708. This sacred text contains contributions from six Sikh Gurus and 30 saints from diverse backgrounds, making it a rich tapestry of spiritual wisdom. Its verses are set to 60 different Raags, or musical scales, designed to be sung at specific times of day or seasons, enriching the Sikh worship experience. </p>
+      <p> This holy book begins with the Japji Sahib by Guru Nanak and features writings from the first five Sikh Gurus and the ninth, Guru Teg Bahadur. Guru Arjan, who compiled it initially, also included verses from Muslim and Hindu saints, showcasing the inclusive spirit of Sikhism. On October 20, 1706, Guru Gobind Singh Ji formally installed the Siri Guru Granth Sahib as the Guru, a tradition celebrated annually as "Guru Gaddi Day." Upon his death in 1708, Guru Gobind Singh Ji passed the spiritual leadership of the Sikhs to the Siri Guru Granth Sahib, ending the era of physical Gurus. He proclaimed that henceforth, the Sikh community should seek guidance from the Guru Granth Sahib, the embodiment of the Word of God. This marked the beginning of the Shabad Guru's reign, guiding Sikhs as a living spirit of enlightenment. </p>
+      <p> The Guru Granth Sahib, also known as the Adi Granth, is more than simply a scripture; it is the Sikhs' living Guru. It is a unique religious scripture that incorporates the teachings of Sikh Gurus and saints from many backgrounds, emphasising God's oneness while rejecting caste and superstition. Its legitimacy and comprehensiveness are unrivalled, having been compiled by Sikh Gurus themselves. It is honoured in Sikh temples, or Gurdwaras, as a sign of its importance in Sikh devotion and communal life. The Guru Granth Sahib is written in Gurmukhi, a script derived from Sanskrit, which helps to connect the Sikh faith to its spiritual and cultural roots.</p>
+    </div>
+  </div>
+
+
+</main>
+  
+  <footer>
+    <p>&copy; 2024 Sikhi Waheguru. All Rights Reserved.</p>
+  </footer>
+
+  <script>
+    // Toggle dark mode and update the button icon
+    function toggleDarkMode() {
+      var body = document.body;
+      body.classList.toggle('dark-mode');
+      var toggleButton = document.querySelector('.dark-mode-toggle');
+      if (body.classList.contains('dark-mode')) {
+        toggleButton.textContent = '☀️'; // Sun icon for light mode
+      } else {
+        toggleButton.textContent = '🌙'; // Moon icon for dark mode
+      }
+    }
+  
+    // Smooth Scrolling for Navigation Links
+    document.addEventListener('DOMContentLoaded', function() {
+      document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener('click', function(e) {
+          e.preventDefault();
+          document.querySelector(this.getAttribute('href')).scrollIntoView({
+            behavior: 'smooth'
+          });
+        });
+      });
+  
+      // Content Filter/Search
+      const searchInput = document.getElementById('site-search');
+  
+      searchInput.addEventListener('keyup', function() {
+        const query = this.value.toUpperCase();
+        const contentSections = document.querySelectorAll('.main-content .content-section');
+  
+        contentSections.forEach(section => {
+          const text = section.querySelector('.text-block').textContent || section.querySelector('.text-block').innerText;
+          if (text.toUpperCase().indexOf(query) > -1) {
+            section.style.display = "";
+          } else {
+            section.style.display = "none";
+          }
+        });
+      });
+    });
+  </script>
+  
+</body>
+</html>

@@ -1,0 +1,311 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sikhi Waheguru</title>
+  <style>
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f5f4f4;
+  transition: background-color 0.3s;
+}
+
+header {
+  display: flex;
+  align-items: center;
+  justify-content: start;
+  padding: 10px;
+  background-color: #00328f;
+  color: white;
+}
+
+.site-title {
+  margin-right: 20px;
+  font-size: 1.8rem;
+  font-weight: bold;
+  color: #ffffff;
+}
+
+a, a:hover, a:focus, a:active {
+  text-decoration: none;
+  color: inherit;
+}
+
+#logo {
+  width: 100px;
+  height: 50px;
+}
+
+#logo img {
+  max-width: 100%;
+  max-height: 100%;
+}
+
+nav {
+  display: flex;
+}
+
+nav a {
+  text-decoration: none;
+  color: white;
+  padding: 10px 20px;
+  margin: 0 10px;
+  background-color: #ff7b00;
+  border-radius: 5px;
+}
+
+.search-container {
+  display: flex;
+  align-items: center;
+}
+
+.search-container input[type="search"] {
+  padding: 5px;
+  font-size: 1rem;
+  border: none;
+  border-radius: 5px;
+}
+
+.search-container button {
+  background: none;
+  border: 1px solid #fff;
+  color: #fff;
+  padding: 5px 10px;
+  margin-left: 5px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+footer {
+  text-align: center;
+  padding: 10px;
+  background-color: #ff7b00;
+}
+
+footer p {
+  margin: 0;
+}
+
+.breadcrumb {
+  padding: 10px 20px;
+  background-color: #f5f4f4;
+}
+
+/* Main Content Styling */
+main {
+  margin-bottom: 2em; /* Space between sections */
+  padding: 20px; /* Padding inside each section */
+  background-color: #ffebcd; /* Light orange background for each section */
+  border: 1px solid #003366; /* Dark blue border */
+  border-radius: 8px; /* Rounded corners for the sections */
+  transition: background-color 0.3s, border-color 0.3s; /* Smooth transitions for dark mode */
+}
+.main-content {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: flex-start;
+  max-width: 1200px;
+  margin: 0 auto; /* Centers the content */
+  padding: 20px;
+}
+
+.content-title {
+  width: 100%;
+  text-align: center;
+  margin-bottom: 20px; /* Space below the title */
+  font-size: 2.5rem;
+}
+
+.content-section {
+  display: flex;
+  align-items: flex-start; /* Aligns items to the top of the container */
+  justify-content: space-between; /* Spaces out the items */
+  margin-bottom: 40px;
+}
+
+.text-block {
+  flex: 1;
+  padding-right: 20px; /* Space inside the text block */
+}
+
+.image-block {
+  flex: 1;
+  max-width: 200px; /* Adjust the max-width to control image size */
+  width: 100px; /* Change this value to your preferred height */
+  margin-right: 20px; /* Space between the image and the text */
+  padding-left: 20px; /* Adjusted padding for image block */
+}
+
+.image-block img {
+  width: auto; /* Adjusts image width automatically */
+  height: auto; /* Adjusts image height automatically */
+  max-width: 100%; /* Ensures image is not larger than its container */
+  max-height: 150px; /* Maximum height for the image */
+}
+
+@media (max-width: 768px) {
+  .content-section {
+    flex-direction: column; /* Stack image and text on top of each other */
+  }
+
+  .image-block,
+  .text-block {
+    width: 100%; /* Full width on smaller screens */
+    max-width: none;
+  }
+
+  .image-block {
+    margin-bottom: 20px; /* Space between image and text on smaller screens */
+  }
+}
+
+/* Dark Mode Styles */
+body.dark-mode {
+  background-color: #121212; /* Dark background for the body */
+  color: #ffffff; /* Light color for the general text for visibility */
+}
+
+body.dark-mode header,
+body.dark-mode footer,
+body.dark-mode .breadcrumb {
+  background-color: #333; /* Darker background for these sections */
+  color: #88C0D0; /* Light text color for visibility */
+}
+body.dark-mode main {
+  background-color: #121212; /* Darker background for the main content in dark mode */
+}
+
+body.dark-mode nav a,
+body.dark-mode .search-container button {
+  background-color: #555; /* Dark background for buttons */
+  color: #88C0D0; /* Light text color for visibility */
+}
+
+body.dark-mode .search-container input[type="search"] {
+  background-color: #555; /* Dark background for search input */
+  color: #88C0D0; /* Light text color for visibility */
+  border-color: #777; /* Light border color for visibility */
+}
+
+body.dark-mode a,
+body.dark-mode a:hover,
+body.dark-mode a:focus,
+body.dark-mode a:active {
+  color: #88C0D0; /* Ensures that links are visible in dark mode */
+}
+
+body.dark-mode .content-title,
+body.dark-mode .text-block h2 {
+  color: #88C0D0; /* Lighter color for headings for better visibility in dark mode */
+}
+</style>
+</head>
+
+<body>
+  <header>
+    <a href="The Gurus.html">
+      <div id="logo">
+        <img src="Khanda3.png" alt="Khanda Logo" />
+      </div>
+    </a>
+
+    <a href="index.html" class="site-title-link">
+      <div class="site-title">Sikhi Waheguru</div>
+    </a>
+
+    <nav>
+      <a href="index.html">History of Sikhism</a>
+      <a href="The Gurus.html">The Gurus</a>
+      <a href="Philosophy & Practices.html">Philosophy & Practices</a>
+      <a href="Scriptures & Literature.html">Scriptures & Literature</a>
+      <a href="Community.html">Community</a>
+    </nav>
+
+    <div class="search-container">
+      <input type="search" id="site-search" name="q"
+             aria-label="Search through site content" placeholder="Search...">
+      <button onclick="search()">Q</button>
+    </div>
+
+    <button class="dark-mode-toggle" onclick="toggleDarkMode()">🌙</button>
+  </header>
+
+  <div class="breadcrumb">
+    <a href="index.html">Home</a> > <a href="The Gurus.html">The Gurus</a>
+  </div>
+</body>
+
+<main class="main-content">
+  <div class="content-section">
+    <div class="image-block">
+      <img src="guru hargobind ji.PNG" alt="Guru Hargobind Ji">
+    </div>
+    <div class="text-block">
+      <h2>Guru Hargobind Ji</h2>
+      <p> Guru Hargobind Ji, the sixth Guru of the Sikhs, combined temporal, or worldly, power with religious leadership, ushering in a significant period in Sikh history from 1595 until 1644. His father, Guru Arjan, created the notion of miri/piri, which symbolises both secular and spiritual power, and it captured this dual position. This dual function was personified by Guru Hargobind Ji, who served as both a mir (chieftain) and a pir (spiritual leader), willing to use force to defend his people when needed. </p>
+      <p> major turning point in Sikhism towards a synthesis of spiritual and military leadership, Guru Hargobind Ji's leadership established a standard for later Gurus and the Sikh community as a whole in their dealings with the local governmental establishment. Sikhism started to change under Guru Hargobind Ji, becoming a highly organised society with a codified martial component. This evolution was partially a reaction to his father, Guru Arjan, being martyred by the Mughal rulers, which had a significant impact on his decisions and deeds. Guru Hargobind Ji created a trained military army and fortified Sikh communities after seeing the necessity for safety. This militia served as a declaration of independence and sovereignty in addition to being a safety precaution. </p>
+      <p> Guru Hargobind Ji's period was marked by important architectural accomplishments that represented his dual positions. He erected the Akal Takht (Throne of the Timeless One) right in front of the Harmandir Sahib (Golden Temple) to act as the chief authority for issuing temporal and spiritual edicts. This structure represented his role as a guardian and spiritual advisor, emphasising the interconnectedness of spiritual and earthly responsibilities. Guru Hargobind Ji's relationship with the Mughals was complicated and riddled with difficulties. His choice to take a martial attitude was in direct response to the Mughal administration's efforts of undermining and controlling the Sikh community. Despite this, he was not always openly hostile to the Mughals; his attitude was more about strategic opposition and safeguarding the Sikh community's autonomy than outright revolt. </p>
+      <p> Guru Hargobind Ji was noted for his dynamic leadership style, which combined decisiveness with profound spiritual understanding. He was approachable to his followers, instilling a sense of pride and perseverance in them. His personal life was shaped by his duties as a family man and a leader, as he balanced his commitments to his immediate family and the greater Sikh Panth. His teachings and actions had a significant impact on the Sikh culture and religion, instilling martial ideals with spiritual activities. The topic of succession following Guru Hargobind Ji was a watershed point in Sikh history. His choice of successor represented his strategic thinking regarding Sikhism's future in the face of increasing Mughal pressure. Guru Hargobind Ji ensured that the leadership of the Sikh community stayed connected with the ideas set by previous Gurus by selecting Har Rai, his younger grandson, over Dhir Mal, who had problematic relations with the Mughals. This decision served to ensure the Sikh tradition's continuation and integrity in the face of external influences. </p>
+    </div>
+  </div>
+
+
+</main>
+  
+  <footer>
+    <p>&copy; 2024 Sikhi Waheguru. All Rights Reserved.</p>
+  </footer>
+
+  <script>
+    // Toggle dark mode and update the button icon
+    function toggleDarkMode() {
+      var body = document.body;
+      body.classList.toggle('dark-mode');
+      var toggleButton = document.querySelector('.dark-mode-toggle');
+      if (body.classList.contains('dark-mode')) {
+        toggleButton.textContent = '☀️'; // Sun icon for light mode
+      } else {
+        toggleButton.textContent = '🌙'; // Moon icon for dark mode
+      }
+    }
+  
+    // Smooth Scrolling for Navigation Links
+    document.addEventListener('DOMContentLoaded', function() {
+      document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener('click', function(e) {
+          e.preventDefault();
+          document.querySelector(this.getAttribute('href')).scrollIntoView({
+            behavior: 'smooth'
+          });
+        });
+      });
+  
+      // Content Filter/Search
+      const searchInput = document.getElementById('site-search');
+  
+      searchInput.addEventListener('keyup', function() {
+        const query = this.value.toUpperCase();
+        const contentSections = document.querySelectorAll('.main-content .content-section');
+  
+        contentSections.forEach(section => {
+          const text = section.querySelector('.text-block').textContent || section.querySelector('.text-block').innerText;
+          if (text.toUpperCase().indexOf(query) > -1) {
+            section.style.display = "";
+          } else {
+            section.style.display = "none";
+          }
+        });
+      });
+    });
+  </script>
+  
+</body>
+</html>

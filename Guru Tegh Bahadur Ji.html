@@ -1,0 +1,310 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sikhi Waheguru</title>
+  <style>
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f5f4f4;
+  transition: background-color 0.3s;
+}
+
+header {
+  display: flex;
+  align-items: center;
+  justify-content: start;
+  padding: 10px;
+  background-color: #00328f;
+  color: white;
+}
+
+.site-title {
+  margin-right: 20px;
+  font-size: 1.8rem;
+  font-weight: bold;
+  color: #ffffff;
+}
+
+a, a:hover, a:focus, a:active {
+  text-decoration: none;
+  color: inherit;
+}
+
+#logo {
+  width: 100px;
+  height: 50px;
+}
+
+#logo img {
+  max-width: 100%;
+  max-height: 100%;
+}
+
+nav {
+  display: flex;
+}
+
+nav a {
+  text-decoration: none;
+  color: white;
+  padding: 10px 20px;
+  margin: 0 10px;
+  background-color: #ff7b00;
+  border-radius: 5px;
+}
+
+.search-container {
+  display: flex;
+  align-items: center;
+}
+
+.search-container input[type="search"] {
+  padding: 5px;
+  font-size: 1rem;
+  border: none;
+  border-radius: 5px;
+}
+
+.search-container button {
+  background: none;
+  border: 1px solid #fff;
+  color: #fff;
+  padding: 5px 10px;
+  margin-left: 5px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+footer {
+  text-align: center;
+  padding: 10px;
+  background-color: #ff7b00;
+}
+
+footer p {
+  margin: 0;
+}
+
+.breadcrumb {
+  padding: 10px 20px;
+  background-color: #f5f4f4;
+}
+
+/* Main Content Styling */
+main {
+  margin-bottom: 2em; /* Space between sections */
+  padding: 20px; /* Padding inside each section */
+  background-color: #ffebcd; /* Light orange background for each section */
+  border: 1px solid #003366; /* Dark blue border */
+  border-radius: 8px; /* Rounded corners for the sections */
+  transition: background-color 0.3s, border-color 0.3s; /* Smooth transitions for dark mode */
+}
+.main-content {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: flex-start;
+  max-width: 1200px;
+  margin: 0 auto; /* Centers the content */
+  padding: 20px;
+}
+
+.content-title {
+  width: 100%;
+  text-align: center;
+  margin-bottom: 20px; /* Space below the title */
+  font-size: 2.5rem;
+}
+
+.content-section {
+  display: flex;
+  align-items: flex-start; /* Aligns items to the top of the container */
+  justify-content: space-between; /* Spaces out the items */
+  margin-bottom: 40px;
+}
+
+.text-block {
+  flex: 1;
+  padding-right: 20px; /* Space inside the text block */
+}
+
+.image-block {
+  flex: 1;
+  max-width: 200px; /* Adjust the max-width to control image size */
+  width: 100px; /* Change this value to your preferred height */
+  margin-right: 20px; /* Space between the image and the text */
+  padding-left: 20px; /* Adjusted padding for image block */
+}
+
+.image-block img {
+  width: auto; /* Adjusts image width automatically */
+  height: auto; /* Adjusts image height automatically */
+  max-width: 100%; /* Ensures image is not larger than its container */
+  max-height: 150px; /* Maximum height for the image */
+}
+
+@media (max-width: 768px) {
+  .content-section {
+    flex-direction: column; /* Stack image and text on top of each other */
+  }
+
+  .image-block,
+  .text-block {
+    width: 100%; /* Full width on smaller screens */
+    max-width: none;
+  }
+
+  .image-block {
+    margin-bottom: 20px; /* Space between image and text on smaller screens */
+  }
+}
+
+/* Dark Mode Styles */
+body.dark-mode {
+  background-color: #121212; /* Dark background for the body */
+  color: #ffffff; /* Light color for the general text for visibility */
+}
+
+body.dark-mode header,
+body.dark-mode footer,
+body.dark-mode .breadcrumb {
+  background-color: #333; /* Darker background for these sections */
+  color: #88C0D0; /* Light text color for visibility */
+}
+body.dark-mode main {
+  background-color: #121212; /* Darker background for the main content in dark mode */
+}
+
+body.dark-mode nav a,
+body.dark-mode .search-container button {
+  background-color: #555; /* Dark background for buttons */
+  color: #88C0D0; /* Light text color for visibility */
+}
+
+body.dark-mode .search-container input[type="search"] {
+  background-color: #555; /* Dark background for search input */
+  color: #88C0D0; /* Light text color for visibility */
+  border-color: #777; /* Light border color for visibility */
+}
+
+body.dark-mode a,
+body.dark-mode a:hover,
+body.dark-mode a:focus,
+body.dark-mode a:active {
+  color: #88C0D0; /* Ensures that links are visible in dark mode */
+}
+
+body.dark-mode .content-title,
+body.dark-mode .text-block h2 {
+  color: #88C0D0; /* Lighter color for headings for better visibility in dark mode */
+}
+</style>
+</head>
+
+<body>
+  <header>
+    <a href="The Gurus.html">
+      <div id="logo">
+        <img src="Khanda3.png" alt="Khanda Logo" />
+      </div>
+    </a>
+
+    <a href="index.html" class="site-title-link">
+      <div class="site-title">Sikhi Waheguru</div>
+    </a>
+
+    <nav>
+      <a href="index.html">History of Sikhism</a>
+      <a href="The Gurus.html">The Gurus</a>
+      <a href="Philosophy & Practices.html">Philosophy & Practices</a>
+      <a href="Scriptures & Literature.html">Scriptures & Literature</a>
+      <a href="Community.html">Community</a>
+    </nav>
+
+    <div class="search-container">
+      <input type="search" id="site-search" name="q"
+             aria-label="Search through site content" placeholder="Search...">
+      <button onclick="search()">Q</button>
+    </div>
+
+    <button class="dark-mode-toggle" onclick="toggleDarkMode()">🌙</button>
+  </header>
+
+  <div class="breadcrumb">
+    <a href="index.html">Home</a> > <a href="The Gurus.html">The Gurus</a>
+  </div>
+</body>
+
+<main class="main-content">
+  <div class="content-section">
+    <div class="image-block">
+      <img src="guru tegh bahadur sahib ji.PNG" alt="Guru Tegh Bahadur Ji">
+    </div>
+    <div class="text-block">
+      <h2>Guru Tegh Bahadur Ji</h2>
+      <p> Guru Tegh Bahadur Ji, the ninth Sikh Guru, served from 1621 to 1675 and was renowned for his profound spiritual understanding and exceptional courage. His life and impact are significant in Sikh history for a variety of reasons. His term as Guru began amid exceptional circumstances. Following the death of Guru Har Krishan, the former Guru, there was some ambiguity concerning his replacement. Many imposters went to Bakala, claiming the title of Guru. During this period, Makhan Shah, a merchant who had survived a violent storm at sea, agreed to give the Guru 501 gold pieces if his life was spared. When Makhan Shah arrived in Bakala, he tested each claimant by providing merely two coins, knowing that the actual Guru would honour his word. When he reached Guru Tegh Bahadur, the Guru instantly sought the remaining money to authenticate his identity. Overjoyed, Makhan Shah proudly announced the finding of the genuine Guru from the rooftops. </p>
+      <p> Guru Tegh Bahadur made great contributions to Sikhism. He included various songs in the Sikh scriptures, which were ultimately included into the Guru Granth Sahib by his son, Guru Gobind Singh. This amendment was incorporated into the final compilation of the Sikh texts, which has remained unmodified since. The most moving part of Guru Tegh Bahadur's life was his sacrifice, which demonstrated his unwavering dedication to the ideas of religious freedom and justice. He was contacted by Kashmiri Brahmins who were being compelled to convert to Islam under the reign of Mughal king Aurangzeb. Guru Tegh Bahadur chose to advocate for their right to religious freedom, which resulted in his detention. When given the option of converting to Islam or facing execution, he chose the latter and was killed in Delhi in 1675. His sacrifice was intended to safeguard religious freedom and liberty, not only for his followers but for all religions. </p>
+      <p> Following Guru Tegh Bahadur execution, Guru Tegh Bahadur body and head were taken away by dedicated Sikhs under perilous conditions. Lakhi Shah Vanjara, a Sikh, recovered the Guru's body and set fire to his whole house in order to execute the funeral rituals without raising suspicion. Meanwhile, three lower-caste Sikhs known as Ranghreta Sikhs recovered the Guru's head. They returned it to Anandpur Sahib, where Guru Gobind Singh and the Sikh community lamented its loss. This gesture gained the Ranghreta community a high standing in Sikh culture. Guru Tegh Bahadur's martyrdom has long been a symbol of ultimate sacrifice, reinforcing the Sikh community's dedication to preserving their faith and the rights of all individuals to practise their religion freely. His life and teachings continue to inspire millions throughout the world, exhibiting the real spirit of resisting injustice and advocating for justice and fairness. </p>
+    </div>
+  </div>
+
+
+</main>
+  
+  <footer>
+    <p>&copy; 2024 Sikhi Waheguru. All Rights Reserved.</p>
+  </footer>
+
+  <script>
+    // Toggle dark mode and update the button icon
+    function toggleDarkMode() {
+      var body = document.body;
+      body.classList.toggle('dark-mode');
+      var toggleButton = document.querySelector('.dark-mode-toggle');
+      if (body.classList.contains('dark-mode')) {
+        toggleButton.textContent = '☀️'; // Sun icon for light mode
+      } else {
+        toggleButton.textContent = '🌙'; // Moon icon for dark mode
+      }
+    }
+  
+    // Smooth Scrolling for Navigation Links
+    document.addEventListener('DOMContentLoaded', function() {
+      document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener('click', function(e) {
+          e.preventDefault();
+          document.querySelector(this.getAttribute('href')).scrollIntoView({
+            behavior: 'smooth'
+          });
+        });
+      });
+  
+      // Content Filter/Search
+      const searchInput = document.getElementById('site-search');
+  
+      searchInput.addEventListener('keyup', function() {
+        const query = this.value.toUpperCase();
+        const contentSections = document.querySelectorAll('.main-content .content-section');
+  
+        contentSections.forEach(section => {
+          const text = section.querySelector('.text-block').textContent || section.querySelector('.text-block').innerText;
+          if (text.toUpperCase().indexOf(query) > -1) {
+            section.style.display = "";
+          } else {
+            section.style.display = "none";
+          }
+        });
+      });
+    });
+  </script>
+  
+</body>
+</html>

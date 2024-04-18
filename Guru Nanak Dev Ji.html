@@ -1,0 +1,311 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sikhi Waheguru</title>
+  <style>
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f5f4f4;
+  transition: background-color 0.3s;
+}
+
+header {
+  display: flex;
+  align-items: center;
+  justify-content: start;
+  padding: 10px;
+  background-color: #00328f;
+  color: white;
+}
+
+.site-title {
+  margin-right: 20px;
+  font-size: 1.8rem;
+  font-weight: bold;
+  color: #ffffff;
+}
+
+a, a:hover, a:focus, a:active {
+  text-decoration: none;
+  color: inherit;
+}
+
+#logo {
+  width: 100px;
+  height: 50px;
+}
+
+#logo img {
+  max-width: 100%;
+  max-height: 100%;
+}
+
+nav {
+  display: flex;
+}
+
+nav a {
+  text-decoration: none;
+  color: white;
+  padding: 10px 20px;
+  margin: 0 10px;
+  background-color: #ff7b00;
+  border-radius: 5px;
+}
+
+.search-container {
+  display: flex;
+  align-items: center;
+}
+
+.search-container input[type="search"] {
+  padding: 5px;
+  font-size: 1rem;
+  border: none;
+  border-radius: 5px;
+}
+
+.search-container button {
+  background: none;
+  border: 1px solid #fff;
+  color: #fff;
+  padding: 5px 10px;
+  margin-left: 5px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+footer {
+  text-align: center;
+  padding: 10px;
+  background-color: #ff7b00;
+}
+
+footer p {
+  margin: 0;
+}
+
+.breadcrumb {
+  padding: 10px 20px;
+  background-color: #f5f4f4;
+}
+
+/* Main Content Styling */
+main {
+  margin-bottom: 2em; /* Space between sections */
+  padding: 20px; /* Padding inside each section */
+  background-color: #ffebcd; /* Light orange background for each section */
+  border: 1px solid #003366; /* Dark blue border */
+  border-radius: 8px; /* Rounded corners for the sections */
+  transition: background-color 0.3s, border-color 0.3s; /* Smooth transitions for dark mode */
+}
+.main-content {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: flex-start;
+  max-width: 1200px;
+  margin: 0 auto; /* Centers the content */
+  padding: 20px;
+}
+
+.content-title {
+  width: 100%;
+  text-align: center;
+  margin-bottom: 20px; /* Space below the title */
+  font-size: 2.5rem;
+}
+
+.content-section {
+  display: flex;
+  align-items: flex-start; /* Aligns items to the top of the container */
+  justify-content: space-between; /* Spaces out the items */
+  margin-bottom: 40px;
+}
+
+.text-block {
+  flex: 1;
+  padding-right: 20px; /* Space inside the text block */
+}
+
+.image-block {
+  flex: 1;
+  max-width: 200px; /* Adjust the max-width to control image size */
+  width: 100px; /* Change this value to your preferred height */
+  margin-right: 20px; /* Space between the image and the text */
+  padding-left: 20px; /* Adjusted padding for image block */
+}
+
+.image-block img {
+  width: auto; /* Adjusts image width automatically */
+  height: auto; /* Adjusts image height automatically */
+  max-width: 100%; /* Ensures image is not larger than its container */
+  max-height: 150px; /* Maximum height for the image */
+}
+
+@media (max-width: 768px) {
+  .content-section {
+    flex-direction: column; /* Stack image and text on top of each other */
+  }
+
+  .image-block,
+  .text-block {
+    width: 100%; /* Full width on smaller screens */
+    max-width: none;
+  }
+
+  .image-block {
+    margin-bottom: 20px; /* Space between image and text on smaller screens */
+  }
+}
+
+/* Dark Mode Styles */
+body.dark-mode {
+  background-color: #121212; /* Dark background for the body */
+  color: #ffffff; /* Light color for the general text for visibility */
+}
+
+body.dark-mode header,
+body.dark-mode footer,
+body.dark-mode .breadcrumb {
+  background-color: #333; /* Darker background for these sections */
+  color: #88C0D0; /* Light text color for visibility */
+}
+body.dark-mode main {
+  background-color: #121212; /* Darker background for the main content in dark mode */
+}
+
+body.dark-mode nav a,
+body.dark-mode .search-container button {
+  background-color: #555; /* Dark background for buttons */
+  color: #88C0D0; /* Light text color for visibility */
+}
+
+body.dark-mode .search-container input[type="search"] {
+  background-color: #555; /* Dark background for search input */
+  color: #88C0D0; /* Light text color for visibility */
+  border-color: #777; /* Light border color for visibility */
+}
+
+body.dark-mode a,
+body.dark-mode a:hover,
+body.dark-mode a:focus,
+body.dark-mode a:active {
+  color: #88C0D0; /* Ensures that links are visible in dark mode */
+}
+
+body.dark-mode .content-title,
+body.dark-mode .text-block h2 {
+  color: #88C0D0; /* Lighter color for headings for better visibility in dark mode */
+}
+</style>
+</head>
+
+<body>
+  <header>
+    <a href="The Gurus.html">
+      <div id="logo">
+        <img src="Khanda3.png" alt="Khanda Logo" />
+      </div>
+    </a>
+
+    <a href="index.html" class="site-title-link">
+      <div class="site-title">Sikhi Waheguru</div>
+    </a>
+
+    <nav>
+      <a href="index.html">History of Sikhism</a>
+      <a href="The Gurus.html">The Gurus</a>
+      <a href="Philosophy & Practices.html">Philosophy & Practices</a>
+      <a href="Scriptures & Literature.html">Scriptures & Literature</a>
+      <a href="Community.html">Community</a>
+    </nav>
+
+    <div class="search-container">
+      <input type="search" id="site-search" name="q"
+             aria-label="Search through site content" placeholder="Search...">
+      <button onclick="search()">Q</button>
+    </div>
+
+    <button class="dark-mode-toggle" onclick="toggleDarkMode()">🌙</button>
+  </header>
+
+  <div class="breadcrumb">
+    <a href="index.html">Home</a> > <a href="The Gurus.html">The Gurus</a>
+  </div>
+</body>
+
+<main class="main-content">
+  <div class="content-section">
+    <div class="image-block">
+      <img src="guru nanak dev ji.PNG" alt="Guru Nanak Dev Ji">
+    </div>
+    <div class="text-block">
+      <h2>Guru Nanak Dev Ji</h2>
+      <p> Guru Nanak Dev Ji, born in 1469 in the village of Talwandi, now known as Nankana Sahib in Pakistan, was the first Sikh Guru and the founder of Sikhism. Unlike the ascetics of his time, he belonged to the Khatri (trading) caste and was far from illiterate, bringing a unique perspective to the spiritual teachings of his era. Nanak's early life in the fertile plains of the Punjab, a region rich with religious diversity, deeply influenced his future teachings. From a young age, he demonstrated a profound interest in spirituality and a distinct inclination towards God, questioning the rituals and conventions of both Hindu and Muslim practices. His teachings would later emphasise the unity of God, the brotherhood of humanity, and the rejection of caste-based distinctions. </p>
+      <p> As Guru Nanak matured, his spiritual curiosity led him on extensive travels, known as Udasis. According to the Puratan janam-sakhi, one of the more historically respected biographies, he made five major journeys that spanned the Indian subcontinent and even reached as far as Mecca and Baghdad. During these travels, he engaged with religious scholars, mystics, and ordinary folk, challenging them to think beyond religious dogma and emphasising the importance of meditation on God’s name (Nam Simran) for spiritual liberation. Nanak’s poetic hymns, rich with philosophical insight, were expressed in the common language of the people, making his teachings accessible to a wide audience. These hymns were later meticulously compiled by the fifth Sikh Guru, Guru Arjan, into the Adi Granth in 1604, which remains the holy scripture of the Sikhs, known as the Guru Granth Sahib. </p>
+      <p> Guru Nanak’s concept of God was revolutionary. He saw God as neither Hindu nor Muslim, and thus his teachings appealed to people across different religious backgrounds. He preached that all humans are equal before God, and he advocated for a society based on fairness, compassion, and justice, rather than ritualistic adherence to religious practices. This message was particularly resonant at a time when Indian society was deeply segmented by caste and creed. Nanak’s theological contributions include the idea of the divine presence within every individual, which could be realized through devotion, ethical living, and community service. His establishment of a communal kitchen (Langar), where anyone could eat regardless of their social status, exemplified his teachings on equality and community. Upon his death in 1539 in Kartarpur, now in Pakistan, Nanak had laid a solid foundation for a new and distinct monotheistic faith. His teachings not only continued through the succession of nine more Sikh Gurus but also shaped a community characterized by a fervent devotion to God, equality among all beings, and active service to the world. This legacy of Guru Nanak continues to inspire millions of Sikhs around the globe today. </p>
+
+    </div>
+  </div>
+
+
+</main>
+  
+  <footer>
+    <p>&copy; 2024 Sikhi Waheguru. All Rights Reserved.</p>
+  </footer>
+
+  <script>
+    // Toggle dark mode and update the button icon
+    function toggleDarkMode() {
+      var body = document.body;
+      body.classList.toggle('dark-mode');
+      var toggleButton = document.querySelector('.dark-mode-toggle');
+      if (body.classList.contains('dark-mode')) {
+        toggleButton.textContent = '☀️'; // Sun icon for light mode
+      } else {
+        toggleButton.textContent = '🌙'; // Moon icon for dark mode
+      }
+    }
+  
+    // Smooth Scrolling for Navigation Links
+    document.addEventListener('DOMContentLoaded', function() {
+      document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener('click', function(e) {
+          e.preventDefault();
+          document.querySelector(this.getAttribute('href')).scrollIntoView({
+            behavior: 'smooth'
+          });
+        });
+      });
+  
+      // Content Filter/Search
+      const searchInput = document.getElementById('site-search');
+  
+      searchInput.addEventListener('keyup', function() {
+        const query = this.value.toUpperCase();
+        const contentSections = document.querySelectorAll('.main-content .content-section');
+  
+        contentSections.forEach(section => {
+          const text = section.querySelector('.text-block').textContent || section.querySelector('.text-block').innerText;
+          if (text.toUpperCase().indexOf(query) > -1) {
+            section.style.display = "";
+          } else {
+            section.style.display = "none";
+          }
+        });
+      });
+    });
+  </script>
+  
+</body>
+</html>

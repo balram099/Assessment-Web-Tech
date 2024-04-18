@@ -83,6 +83,89 @@ nav a {
   cursor: pointer;
 }
 
+.breadcrumb {
+  padding: 10px 20px;
+  background-color: #f5f4f4;
+}
+
+/* Main content and sections */
+main {
+  padding: 20px;
+  background-color: #ffebcd;
+  border: 1px solid #003366;
+  border-radius: 8px;
+}
+
+.content-section {
+  margin-bottom: 2em;
+  padding-bottom: 20px;
+  position: relative;
+}
+
+.content-title {
+  text-align: left;
+  margin-bottom: 20px;
+  font-size: 2.5rem;
+  color: #003366;
+}
+
+.text-block {
+  text-align: justify;
+  font-size: 1rem;
+  line-height: 1.6;
+}
+
+.image-block {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.image-block img {
+  max-width: 100%;
+  max-height: 300px;
+  display: block;
+  margin: 0 auto;
+}
+
+/* Headings and media queries */
+h2 {
+  font-size: 1.5rem;
+  margin-bottom: 0.5rem;
+}
+
+@media (max-width: 768px) {
+  .image-block img {
+    max-height: 200px;
+  }
+}
+
+/* Dark Mode adjustments */
+.dark-mode {
+  background-color: #121212;
+  color: #ffffff;
+}
+
+.dark-mode header,
+.dark-mode footer {
+  background-color: #333;
+  color: #88C0D0;
+}
+
+.dark-mode main,
+.dark-mode nav a,
+.dark-mode .search-container input[type="search"],
+.dark-mode .search-container button,
+.dark-mode a,
+.dark-mode .content-title,
+.dark-mode .text-block h2 {
+  background-color: #000000;
+  color: #88C0D0;
+}
+.dark-mode .text-block { /* For any text inside text-block */
+  color: #ffffff; /* Set text color to white */
+}
+
+/* Footer styles */
 footer {
   text-align: center;
   padding: 10px;
@@ -91,120 +174,7 @@ footer {
 
 footer p {
   margin: 0;
-}
-
-.breadcrumb {
-  padding: 10px 20px;
-  background-color: #f5f4f4;
-}
-
-/* Main Content Styling */
-main {
-  margin-bottom: 2em; /* Space between sections */
-  padding: 20px; /* Padding inside each section */
-  background-color: #ffebcd; /* Light orange background for each section */
-  border: 1px solid #003366; /* Dark blue border */
-  border-radius: 8px; /* Rounded corners for the sections */
-  transition: background-color 0.3s, border-color 0.3s; /* Smooth transitions for dark mode */
-}
-.main-content {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  align-items: flex-start;
-  max-width: 1200px;
-  margin: 0 auto; /* Centers the content */
-  padding: 20px;
-}
-
-.content-title {
-  width: 100%;
-  text-align: center;
-  margin-bottom: 20px; /* Space below the title */
-  font-size: 2.5rem;
-}
-
-.content-section {
-  display: flex;
-  align-items: flex-start; /* Aligns items to the top of the container */
-  justify-content: space-between; /* Spaces out the items */
-  margin-bottom: 40px;
-}
-
-.text-block {
-  flex: 1;
-  padding-right: 20px; /* Space inside the text block */
-}
-
-.image-block {
-  flex: 1;
-  max-width: 200px; /* Adjust the max-width to control image size */
-  width: 100px; /* Change this value to your preferred height */
-  margin-right: 20px; /* Space between the image and the text */
-  padding-left: 20px; /* Adjusted padding for image block */
-}
-
-.image-block img {
-  width: auto; /* Adjusts image width automatically */
-  height: auto; /* Adjusts image height automatically */
-  max-width: 100%; /* Ensures image is not larger than its container */
-  max-height: 150px; /* Maximum height for the image */
-}
-
-@media (max-width: 768px) {
-  .content-section {
-    flex-direction: column; /* Stack image and text on top of each other */
-  }
-
-  .image-block,
-  .text-block {
-    width: 100%; /* Full width on smaller screens */
-    max-width: none;
-  }
-
-  .image-block {
-    margin-bottom: 20px; /* Space between image and text on smaller screens */
-  }
-}
-
-/* Dark Mode Styles */
-body.dark-mode {
-  background-color: #121212; /* Dark background for the body */
-  color: #ffffff; /* Light color for the general text for visibility */
-}
-
-body.dark-mode header,
-body.dark-mode footer,
-body.dark-mode .breadcrumb {
-  background-color: #333; /* Darker background for these sections */
-  color: #88C0D0; /* Light text color for visibility */
-}
-body.dark-mode main {
-  background-color: #121212; /* Darker background for the main content in dark mode */
-}
-
-body.dark-mode nav a,
-body.dark-mode .search-container button {
-  background-color: #555; /* Dark background for buttons */
-  color: #88C0D0; /* Light text color for visibility */
-}
-
-body.dark-mode .search-container input[type="search"] {
-  background-color: #555; /* Dark background for search input */
-  color: #88C0D0; /* Light text color for visibility */
-  border-color: #777; /* Light border color for visibility */
-}
-
-body.dark-mode a,
-body.dark-mode a:hover,
-body.dark-mode a:focus,
-body.dark-mode a:active {
-  color: #88C0D0; /* Ensures that links are visible in dark mode */
-}
-
-body.dark-mode .content-title,
-body.dark-mode .text-block h2 {
-  color: #88C0D0; /* Lighter color for headings for better visibility in dark mode */
+  color: white;
 }
 </style>
 </head>
@@ -239,7 +209,7 @@ body.dark-mode .text-block h2 {
   </header>
 
   <div class="breadcrumb">
-    <a href="index.html">Home</a> > <a href="The Gurus.html">The Gurus</a>
+    <a href="index.html">Home</a> > <a href="The Gurus.html">The Gurus</a> > <a href="Guru Amardas Ji.html">Guru Amardas Ji</a>
   </div>
 </body>
 

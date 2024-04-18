@@ -84,31 +84,15 @@ nav a {
   cursor: pointer;
 }
 
-footer {
-  text-align: center;
-  padding: 10px;
-  background-color: #ff7b00;
-}
-
-footer p {
-  margin: 0;
-}
-
 .breadcrumb {
   padding: 10px 20px;
   background-color: #f5f4f4;
 }
 
+
+/* Main Content Styling */
 /* Main Content Styling */
 main {
-  margin-bottom: 2em; /* Space between sections */
-  padding: 20px; /* Padding inside each section */
-  background-color: #ffebcd; /* Light orange background for each section */
-  border: 1px solid #003366; /* Dark blue border */
-  border-radius: 8px; /* Rounded corners for the sections */
-  transition: background-color 0.3s, border-color 0.3s; /* Smooth transitions for dark mode */
-}
-.main-content {
   margin-bottom: 2em; /* Space between sections */
   padding: 20px; /* Padding inside each section */
   background-color: #ffebcd; /* Light orange background for each section */
@@ -121,7 +105,7 @@ main {
   text-align: left; /* Aligns title to the left */
   margin-bottom: 20px; /* Space below the title */
   font-size: 2.5rem;
-  color: #003366; /* Adjusted title color to match the image */
+  color: #003366; /* Title color to match the theme */
 }
 
 .content-section {
@@ -142,29 +126,26 @@ main {
   margin: 0 auto; /* Centers the image within the block */
 }
 
-
 .text-block {
   text-align: justify; /* Justified text for better readability */
   font-size: 1rem; /* Adjusted text size */
   line-height: 1.6; /* Adjusted line height for better readability */
 }
 
-/* If you have specific font styles or sizes for headings, add them here */
 h2 {
-  font-size: 1.5rem; /* Example size for h2 headings */
-  margin-bottom: .5rem; /* Space below h2 headings */
+  font-size: 1.5rem; /* Size for h2 headings */
+  margin-bottom: 0.5rem; /* Space below h2 headings */
 }
 
+/* Responsive Styles */
 @media (max-width: 768px) {
   .image-block img {
     max-height: 200px; /* Smaller max-height for smaller screens */
   }
-}
-
-  .image-block,
-  .text-block {
+  .image-block, .text-block {
     width: 100%; /* Full width for image and text blocks on smaller screens */
   }
+}
 
 /* Dark Mode Styles */
 body.dark-mode {
@@ -204,6 +185,17 @@ body.dark-mode a:active {
 body.dark-mode .content-title,
 body.dark-mode .text-block h2 {
   color: #88C0D0; /* Lighter color for headings for better visibility in dark mode */
+}
+/* Footer styles */
+footer {
+  text-align: center;
+  padding: 10px;
+  background-color: #ff7b00;
+}
+
+footer p {
+  margin: 0;
+  color: white;
 }
 
   </style>

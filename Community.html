@@ -143,31 +143,52 @@ h2 {
   }
 }
 
-/* Dark Mode adjustments */
-.dark-mode {
-  background-color: #121212;
-  color: #ffffff;
-}
+/* Dark Mode Styles */
+body.dark-mode {
+      background-color: #121212; /* Dark background for the body */
+    }
 
-.dark-mode header,
-.dark-mode footer {
-  background-color: #333;
-  color: #88C0D0;
-}
+    body.dark-mode header,
+    body.dark-mode .breadcrumb {
+      background-color: #333; /* Darker header background */
+    }
 
-.dark-mode main,
-.dark-mode nav a,
-.dark-mode .search-container input[type="search"],
-.dark-mode .search-container button,
-.dark-mode a,
-.dark-mode .content-title,
-.dark-mode .text-block h2 {
-  background-color: #000000;
-  color: #88C0D0;
-}
-.dark-mode .text-block { /* For any text inside text-block */
-  color: #ffffff; /* Set text color to white */
-}
+    body.dark-mode nav a {
+      background-color: #555;
+    }
+
+    body.dark-mode .search-container input[type="search"],
+    body.dark-mode .search-container button {
+      border-color: #777;
+      background-color: #555;
+      color: #88C0D0;
+    }
+    body.dark-mode main {
+      background-color: #121212; /* Darker background for the main content in dark mode */
+    }
+
+    body.dark-mode main section {
+      background-color: #333; /* Darker background for sections in dark mode */
+      border-color: #444; /* Lighter border in dark mode for contrast */
+    }
+    body.dark-mode a,
+    body.dark-mode a:hover,
+    body.dark-mode a:focus,
+    body.dark-mode a:active {
+      color: #88C0D0; /* Ensures that links are visible in dark mode */
+    }
+
+    body.dark-mode main section h2 {
+      color: #88C0D0; /* Lighter color for the heading in dark mode for visibility */
+    }
+
+    body.dark-mode main section p {
+      color: #ccc; /* Lighter color for the text in dark mode for visibility */
+    }
+    body.dark-mode footer {
+      background-color: #333; /* Dark background for footer */
+      color: #88C0D0;
+    }
 
 /* Footer styles */
 footer {
@@ -217,29 +238,29 @@ footer p {
   </body>
 
   <main class="main-content">
-    <div class="content-section">
-        </div>
-        <div class="text-block">
-            <h2>The Khalsa</h2>
-            <p>The formation of the Khalsa in 1699 by Guru Gobind Singh was also a response to the political and religious turmoil of the time. Sikhs were facing persecution, and the creation of the Khalsa was a way to formalize a Sikh identity that stood for moral integrity and spiritual sovereignty. The Khalsa is expected to maintain a high moral standard and to adhere to the teachings of the Gurus at all times. This commitment includes the rejection of superstitions and blind rituals which were prevalent in the society of the time. The Khalsa identity is not just physical but also deeply spiritual, emphasising a direct connection with the Divine without intermediaries.</p>
-            <p>The Khalsa is tasked with leadership roles within the Sikh community, offering guidance and serving as role models. Their duties include not just the defense of all people from tyranny but also the promotion of social justice, the uplifting of the downtrodden, and the performance of charitable works. The principles embedded in the concept of the Khalsa are meant to be lived daily. The members of the Khalsa are expected to embody the qualities of a Sant-Sipahi (saint-soldier), showing devotion in prayer and bravery in the face of adversity.</p>
-        </div>
-        <div class="image-block">
+    <section class="content-section">
+      <div class="text-block">
+        <h2>The Khalsa</h2>
+        <p>The formation of the Khalsa in 1699 by Guru Gobind Singh was also a response to the political and religious turmoil of the time. Sikhs were facing persecution, and the creation of the Khalsa was a way to formalize a Sikh identity that stood for moral integrity and spiritual sovereignty. The Khalsa is expected to maintain a high moral standard and to adhere to the teachings of the Gurus at all times. This commitment includes the rejection of superstitions and blind rituals which were prevalent in the society of the time. The Khalsa identity is not just physical but also deeply spiritual, emphasising a direct connection with the Divine without intermediaries.</p>
+        <p>The Khalsa is tasked with leadership roles within the Sikh community, offering guidance and serving as role models. Their duties include not just the defense of all people from tyranny but also the promotion of social justice, the uplifting of the downtrodden, and the performance of charitable works. The principles embedded in the concept of the Khalsa are meant to be lived daily. The members of the Khalsa are expected to embody the qualities of a Sant-Sipahi (saint-soldier), showing devotion in prayer and bravery in the face of adversity.</p>
+      </div>
+      <div class="image-block">
         <img src="Khalsa_Guru.PNG" alt="The Khalsa and Sikh Identity">
       </div>
-
-
-  </div>
-    <div class="content-section">
-        <div class="text-block">
-            <h2>Langar - The Community Kitchen</h2>
-            <p>The Langar tradition is rooted in the Sikh philosophy that sees all human beings as equal before God. It serves as a practical application of the universal message of sharing and caring, reinforcing the idea that in the eyes of the Divine, no one is superior or inferior. Langar serves as a radical equalizer in society. Historically, it challenged the rigid hierarchies of the caste system by insisting that people of all classes and backgrounds sit together and share a meal. This aspect was revolutionary, serving as a powerful act of social reform. The operation of a Langar, particularly in larger Gurdwaras such as the Harmandir Sahib (Golden Temple) in Amritsar, where thousands are fed daily, is a testament to the organizational skills and dedication of the Sikh community. It showcases the principles of communal cooperation and shared responsibility.</p>
-            <p>The space of the Langar is often filled with the sound of hymns from the Guru Granth Sahib (the Sikh holy scripture), creating a spiritually uplifting atmosphere. Partaking in Langar is seen not just as an act of physical nourishment but also as a form of spiritual communion with the Guru and the community. The Langar has become a global symbol of Sikh generosity and openness. Many Sikh communities worldwide have used Langar as a means to offer aid during disasters, help the homeless, and provide for those in need, regardless of the background of those being served.</p>
-        </div>
-        <div class="image-block">
+    </section>
+  
+    <section class="content-section">
+      <div class="text-block">
+        <h2>Langar - The Community Kitchen</h2>
+        <p>The Langar tradition is rooted in the Sikh philosophy that sees all human beings as equal before God. It serves as a practical application of the universal message of sharing and caring, reinforcing the idea that in the eyes of the Divine, no one is superior or inferior. Langar serves as a radical equalizer in society. Historically, it challenged the rigid hierarchies of the caste system by insisting that people of all classes and backgrounds sit together and share a meal. This aspect was revolutionary, serving as a powerful act of social reform. The operation of a Langar, particularly in larger Gurdwaras such as the Harmandir Sahib (Golden Temple) in Amritsar, where thousands are fed daily, is a testament to the organizational skills and dedication of the Sikh community. It showcases the principles of communal cooperation and shared responsibility.</p>
+        <p>The space of the Langar is often filled with the sound of hymns from the Guru Granth Sahib (the Sikh holy scripture), creating a spiritually uplifting atmosphere. Partaking in Langar is seen not just as an act of physical nourishment but also as a form of spiritual communion with the Guru and the community. The Langar has become a global symbol of Sikh generosity and openness. Many Sikh communities worldwide have used Langar as a means to offer aid during disasters, help the homeless, and provide for those in need, regardless of the background of those being served.</p>
+      </div>
+      <div class="image-block">
         <img src="Langar.png" alt="The Communal Langar Meal">
-    </div>
-</main>
+      </div>
+    </section>
+  </main>
+  
 
   <footer>
     <p>&copy; 2024 Sikhi Waheguru. All Rights Reserved.</p>

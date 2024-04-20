@@ -87,7 +87,6 @@ nav a {
   padding: 10px 20px;
   background-color: #f5f4f4;
 }
-
 /* Main content and sections */
 main {
   padding: 20px; /* Padding around the main content */
@@ -130,43 +129,53 @@ main {
   margin: 0 auto;
 }
 
-/* Headings and media queries */
-h2 {
-  font-size: 1.5rem;
-  margin-bottom: 0.5rem;
-}
 
-@media (max-width: 768px) {
-  .image-block img {
-    max-height: 200px;
-  }
-}
-
-/* Dark Mode */
+/* Dark Mode Styles */
 body.dark-mode {
-  background-color: #121212; /* Dark background for the body */
-}
+      background-color: #121212; /* Dark background for the body */
+    }
 
-.dark-mode header,
-.dark-mode footer {
-  background-color: #333;
-  color: #88C0D0;
-}
+    body.dark-mode header,
+    body.dark-mode .breadcrumb {
+      background-color: #333; /* Darker header background */
+    }
 
-.dark-mode main,
-.dark-mode .content-section,
-.dark-mode nav a,
-.dark-mode .search-container input[type="search"],
-.dark-mode .search-container button,
-.dark-mode a,
-.dark-mode .content-title,
-.dark-mode .text-block h2 {
-  background-color: #000000;
-  color: #88C0D0;
-}
-.dark-mode .text-block { /* For any text inside text-block */
-  color: #ffffff; /* Set text color to white */
-}
+    body.dark-mode nav a {
+      background-color: #555;
+    }
+
+    body.dark-mode .search-container input[type="search"],
+    body.dark-mode .search-container button {
+      border-color: #777;
+      background-color: #555;
+      color: #88C0D0;
+    }
+    body.dark-mode main {
+      background-color: #121212; /* Darker background for the main content in dark mode */
+    }
+
+    body.dark-mode main section {
+      background-color: #333; /* Darker background for sections in dark mode */
+      border-color: #444; /* Lighter border in dark mode for contrast */
+    }
+    body.dark-mode a,
+    body.dark-mode a:hover,
+    body.dark-mode a:focus,
+    body.dark-mode a:active {
+      color: #88C0D0; /* Ensures that links are visible in dark mode */
+    }
+
+    body.dark-mode main section h2 {
+      color: #88C0D0; /* Lighter color for the heading in dark mode for visibility */
+    }
+
+    body.dark-mode main section p {
+      color: #ccc; /* Lighter color for the text in dark mode for visibility */
+    }
+    body.dark-mode footer {
+      background-color: #333; /* Dark background for footer */
+      color: #88C0D0;
+    }
 
 /* Footer styles */
 footer {
@@ -216,7 +225,7 @@ footer p {
 </body>
 
 <main class="main-content">
-  <div class="content-section">
+  <section class="content-section">
     <div class="image-block">
       <img src="guru nanak dev ji.PNG" alt="Guru Nanak Dev Ji">
     </div>
@@ -225,12 +234,10 @@ footer p {
       <p> Guru Nanak Dev Ji, born in 1469 in the village of Talwandi, now known as Nankana Sahib in Pakistan, was the first Sikh Guru and the founder of Sikhism. Unlike the ascetics of his time, he belonged to the Khatri (trading) caste and was far from illiterate, bringing a unique perspective to the spiritual teachings of his era. Nanak's early life in the fertile plains of the Punjab, a region rich with religious diversity, deeply influenced his future teachings. From a young age, he demonstrated a profound interest in spirituality and a distinct inclination towards God, questioning the rituals and conventions of both Hindu and Muslim practices. His teachings would later emphasise the unity of God, the brotherhood of humanity, and the rejection of caste-based distinctions. </p>
       <p> As Guru Nanak matured, his spiritual curiosity led him on extensive travels, known as Udasis. According to the Puratan janam-sakhi, one of the more historically respected biographies, he made five major journeys that spanned the Indian subcontinent and even reached as far as Mecca and Baghdad. During these travels, he engaged with religious scholars, mystics, and ordinary folk, challenging them to think beyond religious dogma and emphasising the importance of meditation on God’s name (Nam Simran) for spiritual liberation. Nanak’s poetic hymns, rich with philosophical insight, were expressed in the common language of the people, making his teachings accessible to a wide audience. These hymns were later meticulously compiled by the fifth Sikh Guru, Guru Arjan, into the Adi Granth in 1604, which remains the holy scripture of the Sikhs, known as the Guru Granth Sahib. </p>
       <p> Guru Nanak’s concept of God was revolutionary. He saw God as neither Hindu nor Muslim, and thus his teachings appealed to people across different religious backgrounds. He preached that all humans are equal before God, and he advocated for a society based on fairness, compassion, and justice, rather than ritualistic adherence to religious practices. This message was particularly resonant at a time when Indian society was deeply segmented by caste and creed. Nanak’s theological contributions include the idea of the divine presence within every individual, which could be realized through devotion, ethical living, and community service. His establishment of a communal kitchen (Langar), where anyone could eat regardless of their social status, exemplified his teachings on equality and community. Upon his death in 1539 in Kartarpur, now in Pakistan, Nanak had laid a solid foundation for a new and distinct monotheistic faith. His teachings not only continued through the succession of nine more Sikh Gurus but also shaped a community characterized by a fervent devotion to God, equality among all beings, and active service to the world. This legacy of Guru Nanak continues to inspire millions of Sikhs around the globe today. </p>
-
-    </div>
-  </div>
-
-
+    </div>  
+  </section>
 </main>
+
   
   <footer>
     <p>&copy; 2024 Sikhi Waheguru. All Rights Reserved.</p>

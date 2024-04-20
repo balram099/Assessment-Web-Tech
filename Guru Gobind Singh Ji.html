@@ -87,7 +87,6 @@ nav a {
   padding: 10px 20px;
   background-color: #f5f4f4;
 }
-
 /* Main content and sections */
 main {
   padding: 20px; /* Padding around the main content */
@@ -130,43 +129,54 @@ main {
   margin: 0 auto;
 }
 
-/* Headings and media queries */
-h2 {
-  font-size: 1.5rem;
-  margin-bottom: 0.5rem;
-}
 
-@media (max-width: 768px) {
-  .image-block img {
-    max-height: 200px;
-  }
-}
-
-/* Dark Mode */
+/* Dark Mode Styles */
 body.dark-mode {
-  background-color: #121212; /* Dark background for the body */
-}
+      background-color: #121212; /* Dark background for the body */
+    }
 
-.dark-mode header,
-.dark-mode footer {
-  background-color: #333;
-  color: #88C0D0;
-}
+    body.dark-mode header,
+    body.dark-mode .breadcrumb {
+      background-color: #333; /* Darker header background */
+    }
 
-.dark-mode main,
-.dark-mode .content-section,
-.dark-mode nav a,
-.dark-mode .search-container input[type="search"],
-.dark-mode .search-container button,
-.dark-mode a,
-.dark-mode .content-title,
-.dark-mode .text-block h2 {
-  background-color: #000000;
-  color: #88C0D0;
-}
-.dark-mode .text-block { /* For any text inside text-block */
-  color: #ffffff; /* Set text color to white */
-}
+    body.dark-mode nav a {
+      background-color: #555;
+    }
+
+    body.dark-mode .search-container input[type="search"],
+    body.dark-mode .search-container button {
+      border-color: #777;
+      background-color: #555;
+      color: #88C0D0;
+    }
+    body.dark-mode main {
+      background-color: #121212; /* Darker background for the main content in dark mode */
+    }
+
+    body.dark-mode main section {
+      background-color: #333; /* Darker background for sections in dark mode */
+      border-color: #444; /* Lighter border in dark mode for contrast */
+    }
+    body.dark-mode a,
+    body.dark-mode a:hover,
+    body.dark-mode a:focus,
+    body.dark-mode a:active {
+      color: #88C0D0; /* Ensures that links are visible in dark mode */
+    }
+
+    body.dark-mode main section h2 {
+      color: #88C0D0; /* Lighter color for the heading in dark mode for visibility */
+    }
+
+    body.dark-mode main section p {
+      color: #ccc; /* Lighter color for the text in dark mode for visibility */
+    }
+    body.dark-mode footer {
+      background-color: #333; /* Dark background for footer */
+      color: #88C0D0;
+    }
+
 /* Footer styles */
 footer {
   text-align: center;
@@ -215,7 +225,7 @@ footer p {
 </body>
 
 <main class="main-content">
-  <div class="content-section">
+  <section class="content-section">
     <div class="image-block">
       <img src="guru gobind singh ji.PNG" alt="Guru Gobind Singh Ji">
     </div>
@@ -226,10 +236,9 @@ footer p {
       <p> Guru Gobind Singh ji literary works include the 'Dasam Granth,' a collection of manuscripts attributed to him, including hymns and philosophical essays. These writings are renowned for their rich language and lyrical structure, which offer profound insights into Guru Gobind Singh ji spiritual philosophy and the values of a virtuous life. Guru Gobind Singh's personal life was marred by tragedy, with the deaths of all four of Guru Gobind Singh ji sons two in combat and two killed by Mughal authorities. These events constitute a sombre chapter in Sikh history, demonstrating the ultimate sacrifices committed for their religion. </p>
       <p> Guru Gobind Singh ji last years were spent in the Deccan, where he completed Guru Gobind Singh ji father's work on the modification of the Adi Granth. After Aurangzeb's death, he briefly collaborated with Guru Gobind Singh ji successor, Bahadur Shah, but was eventually slain in 1708 by those opposed to Guru Gobind Singh ji reforms and military operations.  </p>
     </div>
-  </div>
-
-
+  </section>
 </main>
+
   
   <footer>
     <p>&copy; 2024 Sikhi Waheguru. All Rights Reserved.</p>

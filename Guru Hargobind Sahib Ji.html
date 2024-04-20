@@ -87,7 +87,6 @@ nav a {
   padding: 10px 20px;
   background-color: #f5f4f4;
 }
-
 /* Main content and sections */
 main {
   padding: 20px; /* Padding around the main content */
@@ -130,43 +129,53 @@ main {
   margin: 0 auto;
 }
 
-/* Headings and media queries */
-h2 {
-  font-size: 1.5rem;
-  margin-bottom: 0.5rem;
-}
 
-@media (max-width: 768px) {
-  .image-block img {
-    max-height: 200px;
-  }
-}
-
-/* Dark Mode */
+/* Dark Mode Styles */
 body.dark-mode {
-  background-color: #121212; /* Dark background for the body */
-}
+      background-color: #121212; /* Dark background for the body */
+    }
 
-.dark-mode header,
-.dark-mode footer {
-  background-color: #333;
-  color: #88C0D0;
-}
+    body.dark-mode header,
+    body.dark-mode .breadcrumb {
+      background-color: #333; /* Darker header background */
+    }
 
-.dark-mode main,
-.dark-mode .content-section,
-.dark-mode nav a,
-.dark-mode .search-container input[type="search"],
-.dark-mode .search-container button,
-.dark-mode a,
-.dark-mode .content-title,
-.dark-mode .text-block h2 {
-  background-color: #000000;
-  color: #88C0D0;
-}
-.dark-mode .text-block { /* For any text inside text-block */
-  color: #ffffff; /* Set text color to white */
-}
+    body.dark-mode nav a {
+      background-color: #555;
+    }
+
+    body.dark-mode .search-container input[type="search"],
+    body.dark-mode .search-container button {
+      border-color: #777;
+      background-color: #555;
+      color: #88C0D0;
+    }
+    body.dark-mode main {
+      background-color: #121212; /* Darker background for the main content in dark mode */
+    }
+
+    body.dark-mode main section {
+      background-color: #333; /* Darker background for sections in dark mode */
+      border-color: #444; /* Lighter border in dark mode for contrast */
+    }
+    body.dark-mode a,
+    body.dark-mode a:hover,
+    body.dark-mode a:focus,
+    body.dark-mode a:active {
+      color: #88C0D0; /* Ensures that links are visible in dark mode */
+    }
+
+    body.dark-mode main section h2 {
+      color: #88C0D0; /* Lighter color for the heading in dark mode for visibility */
+    }
+
+    body.dark-mode main section p {
+      color: #ccc; /* Lighter color for the text in dark mode for visibility */
+    }
+    body.dark-mode footer {
+      background-color: #333; /* Dark background for footer */
+      color: #88C0D0;
+    }
 
 /* Footer styles */
 footer {
@@ -216,21 +225,20 @@ footer p {
 </body>
 
 <main class="main-content">
-  <div class="content-section">
+  <section class="content-section">
     <div class="image-block">
       <img src="guru hargobind ji.PNG" alt="Guru Hargobind Ji">
     </div>
     <div class="text-block">
       <h2>Guru Hargobind Ji</h2>
       <p> Guru Hargobind Ji, the sixth Guru of the Sikhs, combined temporal, or worldly, power with religious leadership, ushering in a significant period in Sikh history from 1595 until 1644. His father, Guru Arjan, created the notion of miri/piri, which symbolises both secular and spiritual power, and it captured this dual position. This dual function was personified by Guru Hargobind Ji, who served as both a mir (chieftain) and a pir (spiritual leader), willing to use force to defend his people when needed. </p>
-      <p> major turning point in Sikhism towards a synthesis of spiritual and military leadership, Guru Hargobind Ji's leadership established a standard for later Gurus and the Sikh community as a whole in their dealings with the local governmental establishment. Sikhism started to change under Guru Hargobind Ji, becoming a highly organised society with a codified martial component. This evolution was partially a reaction to his father, Guru Arjan, being martyred by the Mughal rulers, which had a significant impact on his decisions and deeds. Guru Hargobind Ji created a trained military army and fortified Sikh communities after seeing the necessity for safety. This militia served as a declaration of independence and sovereignty in addition to being a safety precaution. </p>
+      <p> The major turning point in Sikhism towards a synthesis of spiritual and military leadership, Guru Hargobind Ji's leadership established a standard for later Gurus and the Sikh community as a whole in their dealings with the local governmental establishment. Sikhism started to change under Guru Hargobind Ji, becoming a highly organised society with a codified martial component. This evolution was partially a reaction to his father, Guru Arjan, being martyred by the Mughal rulers, which had a significant impact on his decisions and deeds. Guru Hargobind Ji created a trained military army and fortified Sikh communities after seeing the necessity for safety. This militia served as a declaration of independence and sovereignty in addition to being a safety precaution. </p>
       <p> Guru Hargobind Ji's period was marked by important architectural accomplishments that represented his dual positions. He erected the Akal Takht (Throne of the Timeless One) right in front of the Harmandir Sahib (Golden Temple) to act as the chief authority for issuing temporal and spiritual edicts. This structure represented his role as a guardian and spiritual advisor, emphasising the interconnectedness of spiritual and earthly responsibilities. Guru Hargobind Ji's relationship with the Mughals was complicated and riddled with difficulties. His choice to take a martial attitude was in direct response to the Mughal administration's efforts of undermining and controlling the Sikh community. Despite this, he was not always openly hostile to the Mughals; his attitude was more about strategic opposition and safeguarding the Sikh community's autonomy than outright revolt. </p>
       <p> Guru Hargobind Ji was noted for his dynamic leadership style, which combined decisiveness with profound spiritual understanding. He was approachable to his followers, instilling a sense of pride and perseverance in them. His personal life was shaped by his duties as a family man and a leader, as he balanced his commitments to his immediate family and the greater Sikh Panth. His teachings and actions had a significant impact on the Sikh culture and religion, instilling martial ideals with spiritual activities. The topic of succession following Guru Hargobind Ji was a watershed point in Sikh history. His choice of successor represented his strategic thinking regarding Sikhism's future in the face of increasing Mughal pressure. Guru Hargobind Ji ensured that the leadership of the Sikh community stayed connected with the ideas set by previous Gurus by selecting Har Rai, his younger grandson, over Dhir Mal, who had problematic relations with the Mughals. This decision served to ensure the Sikh tradition's continuation and integrity in the face of external influences. </p>
     </div>
-  </div>
-
-
+  </section>
 </main>
+
   
   <footer>
     <p>&copy; 2024 Sikhi Waheguru. All Rights Reserved.</p>

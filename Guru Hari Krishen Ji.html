@@ -87,7 +87,6 @@ nav a {
   padding: 10px 20px;
   background-color: #f5f4f4;
 }
-
 /* Main content and sections */
 main {
   padding: 20px; /* Padding around the main content */
@@ -104,6 +103,7 @@ main {
   border: 1px solid #003366; /* Solid border with a specified width and color */
   border-radius: inherit; /* Inherits the border-radius from main */
 }
+
 .content-title {
   text-align: left;
   margin-bottom: 20px;
@@ -129,43 +129,53 @@ main {
   margin: 0 auto;
 }
 
-/* Headings and media queries */
-h2 {
-  font-size: 1.5rem;
-  margin-bottom: 0.5rem;
-}
 
-@media (max-width: 768px) {
-  .image-block img {
-    max-height: 200px;
-  }
-}
-
-/* Dark Mode */
+/* Dark Mode Styles */
 body.dark-mode {
-  background-color: #121212; /* Dark background for the body */
-}
+      background-color: #121212; /* Dark background for the body */
+    }
 
-.dark-mode header,
-.dark-mode footer {
-  background-color: #333;
-  color: #88C0D0;
-}
+    body.dark-mode header,
+    body.dark-mode .breadcrumb {
+      background-color: #333; /* Darker header background */
+    }
 
-.dark-mode main,
-.dark-mode .content-section,
-.dark-mode nav a,
-.dark-mode .search-container input[type="search"],
-.dark-mode .search-container button,
-.dark-mode a,
-.dark-mode .content-title,
-.dark-mode .text-block h2 {
-  background-color: #000000;
-  color: #88C0D0;
-}
-.dark-mode .text-block { /* For any text inside text-block */
-  color: #ffffff; /* Set text color to white */
-}
+    body.dark-mode nav a {
+      background-color: #555;
+    }
+
+    body.dark-mode .search-container input[type="search"],
+    body.dark-mode .search-container button {
+      border-color: #777;
+      background-color: #555;
+      color: #88C0D0;
+    }
+    body.dark-mode main {
+      background-color: #121212; /* Darker background for the main content in dark mode */
+    }
+
+    body.dark-mode main section {
+      background-color: #333; /* Darker background for sections in dark mode */
+      border-color: #444; /* Lighter border in dark mode for contrast */
+    }
+    body.dark-mode a,
+    body.dark-mode a:hover,
+    body.dark-mode a:focus,
+    body.dark-mode a:active {
+      color: #88C0D0; /* Ensures that links are visible in dark mode */
+    }
+
+    body.dark-mode main section h2 {
+      color: #88C0D0; /* Lighter color for the heading in dark mode for visibility */
+    }
+
+    body.dark-mode main section p {
+      color: #ccc; /* Lighter color for the text in dark mode for visibility */
+    }
+    body.dark-mode footer {
+      background-color: #333; /* Dark background for footer */
+      color: #88C0D0;
+    }
 
 /* Footer styles */
 footer {
@@ -215,7 +225,7 @@ footer p {
 </body>
 
 <main class="main-content">
-  <div class="content-section">
+  <section class="content-section">
     <div class="image-block">
       <img src="guru harkrishan ji.PNG" alt="Guru Hari Krishen Ji">
     </div>
@@ -223,13 +233,11 @@ footer p {
       <h2>Guru Hari Krishen Ji</h2>
       <p> Guru Hari Krishen Ji, the eighth Sikh Guru, was born in 1656 and was a spiritual leader from an early age till his tragic death in 1664. Guru Hari Krishen, known for his devotion and compassion, was invited to Delhi by Mughal Emperor Aurangzeb from the Shiwalik Hills. This invitation was part of Aurangzeb's efforts to monitor and manage the various religious sects under his dominion. While in Delhi, Guru Hari Krishen dedicated himself to helping the poor and the afflicted. During his stay, he acquired smallpox. Despite his youth and limited leadership, he left an indelible impression on his followers with his commitment to healing and spiritual advice. </p>
       <p> As he lay dying, Guru Hari Krishen Ji uttered the words "Baba Bakale," indicating to his disciples the location and identity of the future successor. This mysterious note addressed "Baba" (an elderly man) in the village of Bakala. This was a watershed moment for the Sikh community, leading them to the next Guru, Tegh Bahadur, who lived in Bakala. Tegh Bahadur was Guru Hargobind (the sixth Guru)'s second wife's son and the half-brother of Guru Hari Krishen Ji's grandfather, hence he was intimately linked to the Sikh leadership lineage. Guru Hari Krishen's brief but impactful stint as Guru is renowned for his humility, tremendous empathy for the ill and underprivileged, and his intelligent and critical choice to choose his successor, safeguarding the spiritual and ethical leadership of the Sikh faith. His life and teachings continue to inspire Sikhs throughout the world. </p>
-      <p> Guru Hari Krishen caught smallpox. As his illness deteriorated, he was tasked with guaranteeing the ongoing leadership of the Sikh community. His dying words, "Baba Bakale," were a deliberate and deep clue pointing his supporters to his successor. This enigmatic statement was designed to avert succession conflicts and led straight to Tegh Bahadur, who lived in the hamlet of Bakala. Tegh Bahadur was not only a biological relative of Guru Hari Krishen, as he was the son of the sixth Guru, Guru Hargobind, but he was also a spiritual giant who had lived a life of profound meditation and spiritual discipline. The term "Baba Bakale" effectively steered the Sikh community through a peaceful leadership transition to Guru Tegh Bahadur, who went on to become a revered guru for his spiritual depth and ultimate sacrifice in the defence of religious freedom. Guru Hari Krishen Ji's legacy is defined by his young purity and mature understanding of the challenges of spiritual leadership. His life exemplifies the power and purity of spiritual dedication in Sikhism, and his death at such a young age is grieved as a terrible loss while simultaneously being recognised for his heavenly gifts to the faith. </p>
+      <p> Guru Hari Krishen caught smallpox. As his illness deteriorated, he was tasked with guaranteeing the ongoing leadership of the Sikh community. His dying words, "Baba Bakale," were a deliberate and deep clue pointing his supporters to his successor. This enigmatic statement was designed to avert succession conflicts and led straight to Tegh Bahadur, who lived in the hamlet of Bakala. Tegh Bahadur was not only a biological relative of Guru Hari Krishen, as he was the son of the sixth Guru, Guru Hargobind, but he was also a spiritual giant who had lived a life of profound meditation and spiritual discipline. The term "Baba Bakale" effectively steered the Sikh community through a peaceful leadership transition to Guru Tegh Bahadur, who went on to become a revered guru for his spiritual depth and ultimate sacrifice in the defence of religious freedom. Guru Hari Krishen Ji's legacy is defined by his young purity and mature understanding of the challenges of spiritual leadership. His life exemplifies the power and purity of spiritual dedication in Sikhism, and his death at such a young age is grieved as a terrible loss while simultaneously being recognised for his heavenly gifts to the faith. </p> 
     </div>
-  </div>
-
-
+  </section>
 </main>
-  
+
   <footer>
     <p>&copy; 2024 Sikhi Waheguru. All Rights Reserved.</p>
   </footer>

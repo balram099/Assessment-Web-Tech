@@ -87,7 +87,6 @@ nav a {
   padding: 10px 20px;
   background-color: #f5f4f4;
 }
-
 /* Main content and sections */
 main {
   padding: 20px; /* Padding around the main content */
@@ -130,43 +129,53 @@ main {
   margin: 0 auto;
 }
 
-/* Headings and media queries */
-h2 {
-  font-size: 1.5rem;
-  margin-bottom: 0.5rem;
-}
 
-@media (max-width: 768px) {
-  .image-block img {
-    max-height: 200px;
-  }
-}
-
-/* Dark Mode */
+/* Dark Mode Styles */
 body.dark-mode {
-  background-color: #121212; /* Dark background for the body */
-}
+      background-color: #121212; /* Dark background for the body */
+    }
 
-.dark-mode header,
-.dark-mode footer {
-  background-color: #333;
-  color: #88C0D0;
-}
+    body.dark-mode header,
+    body.dark-mode .breadcrumb {
+      background-color: #333; /* Darker header background */
+    }
 
-.dark-mode main,
-.dark-mode .content-section,
-.dark-mode nav a,
-.dark-mode .search-container input[type="search"],
-.dark-mode .search-container button,
-.dark-mode a,
-.dark-mode .content-title,
-.dark-mode .text-block h2 {
-  background-color: #000000;
-  color: #88C0D0;
-}
-.dark-mode .text-block { /* For any text inside text-block */
-  color: #ffffff; /* Set text color to white */
-}
+    body.dark-mode nav a {
+      background-color: #555;
+    }
+
+    body.dark-mode .search-container input[type="search"],
+    body.dark-mode .search-container button {
+      border-color: #777;
+      background-color: #555;
+      color: #88C0D0;
+    }
+    body.dark-mode main {
+      background-color: #121212; /* Darker background for the main content in dark mode */
+    }
+
+    body.dark-mode main section {
+      background-color: #333; /* Darker background for sections in dark mode */
+      border-color: #444; /* Lighter border in dark mode for contrast */
+    }
+    body.dark-mode a,
+    body.dark-mode a:hover,
+    body.dark-mode a:focus,
+    body.dark-mode a:active {
+      color: #88C0D0; /* Ensures that links are visible in dark mode */
+    }
+
+    body.dark-mode main section h2 {
+      color: #88C0D0; /* Lighter color for the heading in dark mode for visibility */
+    }
+
+    body.dark-mode main section p {
+      color: #ccc; /* Lighter color for the text in dark mode for visibility */
+    }
+    body.dark-mode footer {
+      background-color: #333; /* Dark background for footer */
+      color: #88C0D0;
+    }
 
 /* Footer styles */
 footer {
@@ -216,19 +225,18 @@ footer p {
 </body>
 
 <main class="main-content">
-  <div class="content-section">
+  <section class="content-section">
     <div class="image-block">
       <img src="guru har rai ji.PNG" alt="Guru Har Rai Ji">
     </div>
     <div class="text-block">
       <h2>Guru Har Rai Ji</h2>
-      <p> Guru Har Rai was the seventh Sikh Guru from 1630 to 1661, a very peaceful time. He chose a more private existence, relocating deeper into the Shiwalik Hills to a town named Sirmur. Despite his isolated existence, he maintained contact with his followers by leaving his hideaway on occasion to visit and preach to Sikhs on the Punjab plains. Masands, trustworthy emissaries who transmitted news and collected donations to support the Sikh faith's operations, helped him communicate with the larger Sikh community. This calm time, however, was not without obstacles. Guru Har Rai's term coincided with substantial political instability in the Mughal Empire. After conquering his brother Dara Shikoh and establishing the Mughal throne, Aurangzeb attempted to preserve allegiance. Aurangzeb, who saw Guru Har Rai as a supporter of his opponent, requested that he transfer his son, Ram Rai, to the Mughal court. The underlying purpose was probably twofold: to utilise Ram Rai as a political captive and to shape him into a Mughal supporter.</p>
-      <p> During Ram Rai's stay in the Mughal court, he faced a critical episode that questioned his honesty. Aurangzeb questioned a passage in Sikh texts that he construed as insulting to Muslims. Under pressure, Ram Rai changed the phrasing to avoid insulting the Emperor. Guru Har Rai saw the act of changing the scripture as a serious mistake. According to Sikh tradition, the words of the Guru Granth Sahib are sacred, and changing them is considered sacrilege. Disturbed by his son's activities, Guru Har Rai promised never to meet Ram Rai again, severing relations with him for jeopardising the purity of Sikh teachings. As a result, Ram Rai did not take up the job of Guru. Instead, the Sikh community's leadership was passed down to Har Rai's younger son, Hari Krishen, who was just five years old. This shift highlighted the primary ideals of Sikhism: fidelity to the Gurus' unmodified teachings and the moral rectitude demanded of its leaders. Guru Har Rai's leadership therefore emphasised both a period of relative tranquilly and a watershed moment of principled resistance to foreign influences and internal problems, guaranteeing the integrity and continuation of the Sikh faith.</p>
+      <p>Guru Har Rai was the seventh Sikh Guru from 1630 to 1661, a very peaceful time. He chose a more private existence, relocating deeper into the Shiwalik Hills to a town named Sirmur. Despite his isolated existence, he maintained contact with his followers by leaving his hideaway on occasion to visit and preach to Sikhs on the Punjab plains. Masands, trustworthy emissaries who transmitted news and collected donations to support the Sikh faith's operations, helped him communicate with the larger Sikh community. This calm time, however, was not without obstacles. Guru Har Rai's term coincided with substantial political instability in the Mughal Empire. After conquering his brother Dara Shikoh and establishing the Mughal throne, Aurangzeb attempted to preserve allegiance. Aurangzeb, who saw Guru Har Rai as a supporter of his opponent, requested that he transfer his son, Ram Rai, to the Mughal court. The underlying purpose was probably twofold: to use Ram Rai as a political captive and to shape him into a Mughal supporter.</p>
+      <p>During Ram Rai's stay at the Mughal court, he faced a critical episode that questioned his integrity. Aurangzeb questioned a passage in Sikh texts that he construed as insulting to Muslims. Under pressure, Ram Rai altered the phrasing to avoid offending the Emperor. Guru Har Rai saw the act of altering the scripture as a serious breach of trust. According to Sikh tradition, the words of the Guru Granth Sahib are sacred, and altering them is considered sacrilege. Disturbed by his son's actions, Guru Har Rai vowed never to meet Ram Rai again, severing relations with him for jeopardizing the purity of Sikh teachings. As a result, Ram Rai did not assume the role of Guru. Instead, the leadership of the Sikh community was passed down to Har Rai's younger son, Hari Krishen, who was just five years old. This transition underscored the core values of Sikhism: fidelity to the Gurus' unaltered teachings and the moral integrity required of its leaders. Guru Har Rai's leadership thus emphasized both a period of relative tranquility and a defining moment of principled resistance to external pressures and internal challenges, ensuring the integrity and continuation of the Sikh faith.</p>
     </div>
-  </div>
-
-
+  </section>
 </main>
+
   
   <footer>
     <p>&copy; 2024 Sikhi Waheguru. All Rights Reserved.</p>

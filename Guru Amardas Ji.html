@@ -87,19 +87,21 @@ nav a {
   padding: 10px 20px;
   background-color: #f5f4f4;
 }
-
 /* Main content and sections */
 main {
-  padding: 20px;
-  background-color: #ffebcd;
-  border: 1px solid #003366;
-  border-radius: 8px;
+  padding: 20px; /* Padding around the main content */
+  background-color: #ffffff; /* Light background for the content area */
+  transition: background-color 0.3s; /* Smooth transition for dark mode */
+  border-radius: 8px; /* Same as your previous border-radius value */
 }
 
 .content-section {
   margin-bottom: 2em;
   padding-bottom: 20px;
   position: relative;
+  background-color: #ffebcd; /* Inherits the background color from main */
+  border: 1px solid #003366; /* Solid border with a specified width and color */
+  border-radius: inherit; /* Inherits the border-radius from main */
 }
 
 .content-title {
@@ -127,43 +129,53 @@ main {
   margin: 0 auto;
 }
 
-/* Headings and media queries */
-h2 {
-  font-size: 1.5rem;
-  margin-bottom: 0.5rem;
-}
 
-@media (max-width: 768px) {
-  .image-block img {
-    max-height: 200px;
-  }
-}
+/* Dark Mode Styles */
+body.dark-mode {
+      background-color: #121212; /* Dark background for the body */
+    }
 
-/* Dark Mode adjustments */
-.dark-mode {
-  background-color: #121212;
-  color: #ffffff;
-}
+    body.dark-mode header,
+    body.dark-mode .breadcrumb {
+      background-color: #333; /* Darker header background */
+    }
 
-.dark-mode header,
-.dark-mode footer {
-  background-color: #333;
-  color: #88C0D0;
-}
+    body.dark-mode nav a {
+      background-color: #555;
+    }
 
-.dark-mode main,
-.dark-mode nav a,
-.dark-mode .search-container input[type="search"],
-.dark-mode .search-container button,
-.dark-mode a,
-.dark-mode .content-title,
-.dark-mode .text-block h2 {
-  background-color: #000000;
-  color: #88C0D0;
-}
-.dark-mode .text-block { /* For any text inside text-block */
-  color: #ffffff; /* Set text color to white */
-}
+    body.dark-mode .search-container input[type="search"],
+    body.dark-mode .search-container button {
+      border-color: #777;
+      background-color: #555;
+      color: #88C0D0;
+    }
+    body.dark-mode main {
+      background-color: #121212; /* Darker background for the main content in dark mode */
+    }
+
+    body.dark-mode main section {
+      background-color: #333; /* Darker background for sections in dark mode */
+      border-color: #444; /* Lighter border in dark mode for contrast */
+    }
+    body.dark-mode a,
+    body.dark-mode a:hover,
+    body.dark-mode a:focus,
+    body.dark-mode a:active {
+      color: #88C0D0; /* Ensures that links are visible in dark mode */
+    }
+
+    body.dark-mode main section h2 {
+      color: #88C0D0; /* Lighter color for the heading in dark mode for visibility */
+    }
+
+    body.dark-mode main section p {
+      color: #ccc; /* Lighter color for the text in dark mode for visibility */
+    }
+    body.dark-mode footer {
+      background-color: #333; /* Dark background for footer */
+      color: #88C0D0;
+    }
 
 /* Footer styles */
 footer {
@@ -213,7 +225,7 @@ footer p {
 </body>
 
 <main class="main-content">
-  <div class="content-section">
+  <section class="content-section">
     <div class="image-block">
       <img src="guru amardas ji.PNG" alt="Guru Amardas Ji">
     </div>
@@ -223,11 +235,9 @@ footer p {
       <p> Significant literary contributions to Sikhism were also made by Guru Amar Das. Nine hundred and seven of his hymns were eventually included in the Guru Granth Sahib. The themes of devotion to God, the pointlessness of rituals, and the significance of the Guru in a devotee's spiritual life persisted throughout his songs. Guru Amar Das created new, Sikh-focused pilgrimage sites as a calculated attempt to strengthen the Sikh identity and offer an alternative to the established Hindu pilgrimage sites. The most important of them was the baoli (stepwell) at Goindval, which developed into a social hub for the Sikh community in addition to being a place of worship. </p>
       <p> The introduction and formalisation of many Sikh festivals by Guru Amar Das contributed to the development of stronger ties within the community. These included the spring harvest celebration of Baisakhi and the festive celebration of Diwali, which unites Sikh celebrations with the wider cultural customs of the area while maintaining their unique Sikh importance. In the Sikh community, he was a fervent supporter of women's equality and rights. He forbade customs like Sati, which is the burning of a widow on her husband's funeral pyre, and Purdah, which is the veiling of women, and he promoted women's involvement in all religious and social Sikhism-related activities.</p>
     </div>
-  </div>
-
-
+  </section>
 </main>
-  
+
   <footer>
     <p>&copy; 2024 Sikhi Waheguru. All Rights Reserved.</p>
   </footer>

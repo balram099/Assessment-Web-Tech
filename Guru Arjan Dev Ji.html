@@ -87,7 +87,6 @@ nav a {
   padding: 10px 20px;
   background-color: #f5f4f4;
 }
-
 /* Main content and sections */
 main {
   padding: 20px; /* Padding around the main content */
@@ -130,43 +129,54 @@ main {
   margin: 0 auto;
 }
 
-/* Headings and media queries */
-h2 {
-  font-size: 1.5rem;
-  margin-bottom: 0.5rem;
-}
 
-@media (max-width: 768px) {
-  .image-block img {
-    max-height: 200px;
-  }
-}
-
-/* Dark Mode */
+/* Dark Mode Styles */
 body.dark-mode {
-  background-color: #121212; /* Dark background for the body */
-}
+      background-color: #121212; /* Dark background for the body */
+    }
 
-.dark-mode header,
-.dark-mode footer {
-  background-color: #333;
-  color: #88C0D0;
-}
+    body.dark-mode header,
+    body.dark-mode .breadcrumb {
+      background-color: #333; /* Darker header background */
+    }
 
-.dark-mode main,
-.dark-mode .content-section,
-.dark-mode nav a,
-.dark-mode .search-container input[type="search"],
-.dark-mode .search-container button,
-.dark-mode a,
-.dark-mode .content-title,
-.dark-mode .text-block h2 {
-  background-color: #000000;
-  color: #88C0D0;
-}
-.dark-mode .text-block { /* For any text inside text-block */
-  color: #ffffff; /* Set text color to white */
-}
+    body.dark-mode nav a {
+      background-color: #555;
+    }
+
+    body.dark-mode .search-container input[type="search"],
+    body.dark-mode .search-container button {
+      border-color: #777;
+      background-color: #555;
+      color: #88C0D0;
+    }
+    body.dark-mode main {
+      background-color: #121212; /* Darker background for the main content in dark mode */
+    }
+
+    body.dark-mode main section,
+    body.dark-mode .content-section {
+      background-color: #333; /* Darker background for sections in dark mode */
+      border-color: #444; /* Lighter border in dark mode for contrast */
+    }
+    body.dark-mode a,
+    body.dark-mode a:hover,
+    body.dark-mode a:focus,
+    body.dark-mode a:active {
+      color: #88C0D0; /* Ensures that links are visible in dark mode */
+    }
+
+    body.dark-mode main section h2 {
+      color: #88C0D0; /* Lighter color for the heading in dark mode for visibility */
+    }
+
+    body.dark-mode main section p {
+      color: #ccc; /* Lighter color for the text in dark mode for visibility */
+    }
+    body.dark-mode footer {
+      background-color: #333; /* Dark background for footer */
+      color: #88C0D0;
+    }
 
 /* Footer styles */
 footer {
@@ -216,9 +226,9 @@ footer p {
 </body>
 
 <main class="main-content">
-  <div class="content-section">
+  <section class="content-section">
     <div class="image-block">
-      <img src="guru arjan dev ji.PNG" alt="Guru arjan Dev Ji">
+      <img src="guru arjan dev ji.PNG" alt="Guru Arjan Dev Ji">
     </div>
     <div class="text-block">
       <h2>Guru Arjan Dev Ji</h2>
@@ -226,10 +236,9 @@ footer p {
       <p> Under his guidance, the Sikh community was greatly extended, particularly among the Jat agricultural caste, which resulted in a notable rise in the number of converts. However, the Mughal authorities were disturbed by his successful outreach attempts. Rumours that Guru Arjan was backing his rebellious son Khusro influenced Emperor Jahangir, and the Mughal ruler of Punjab became more and more alarmed about the spread of Sikhism. The result of these political tensions was Guru Arjan's arrest and severe torture at the hands of Mughal authorities. Guru Arjan had a significant influence on Sikhism's spiritual and architectural environment prior to his demise. He oversaw the building of Amritsar's Harmandir Sahib (Golden Temple), which would eventually grow to be considered the most sacred place in Sikhism. Beyond religious literature and temples, he also founded mass langars (community kitchens) that welcomed individuals from all castes and backgrounds, fostering equality and a sense of community. </p>
       <p> Not only was Guru Arjan's passing heartbreaking, but it also marked a turning point in Sikhism. His dying directive to his son Hargobind was to always carry a gun, opening the door for the Sikh community to take a more militant stand for justice and their faith. With this guidance, Sikh history entered a new era in which spiritual devotion and military readiness converged to shape the path of the Sikh faith under succeeding Gurus. </p>
     </div>
-  </div>
-
-
+  </section>
 </main>
+
   
   <footer>
     <p>&copy; 2024 Sikhi Waheguru. All Rights Reserved.</p>

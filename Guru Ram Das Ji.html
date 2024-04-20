@@ -87,7 +87,6 @@ nav a {
   padding: 10px 20px;
   background-color: #f5f4f4;
 }
-
 /* Main content and sections */
 main {
   padding: 20px; /* Padding around the main content */
@@ -130,43 +129,53 @@ main {
   margin: 0 auto;
 }
 
-/* Headings and media queries */
-h2 {
-  font-size: 1.5rem;
-  margin-bottom: 0.5rem;
-}
-
-@media (max-width: 768px) {
-  .image-block img {
-    max-height: 200px;
-  }
-}
 
 /* Dark Mode Styles */
 body.dark-mode {
-  background-color: #121212; /* Dark background for the body */
-}
+      background-color: #121212; /* Dark background for the body */
+    }
 
-.dark-mode header,
-.dark-mode footer {
-  background-color: #333;
-  color: #88C0D0;
-}
+    body.dark-mode header,
+    body.dark-mode .breadcrumb {
+      background-color: #333; /* Darker header background */
+    }
 
-.dark-mode main,
-.dark-mode .content-section,
-.dark-mode nav a,
-.dark-mode .search-container input[type="search"],
-.dark-mode .search-container button,
-.dark-mode a,
-.dark-mode .content-title,
-.dark-mode .text-block h2 {
-  background-color: #000000;
-  color: #88C0D0;
-}
-.dark-mode .text-block { /* For any text inside text-block */
-  color: #ffffff; /* Set text color to white */
-}
+    body.dark-mode nav a {
+      background-color: #555;
+    }
+
+    body.dark-mode .search-container input[type="search"],
+    body.dark-mode .search-container button {
+      border-color: #777;
+      background-color: #555;
+      color: #88C0D0;
+    }
+    body.dark-mode main {
+      background-color: #121212; /* Darker background for the main content in dark mode */
+    }
+
+    body.dark-mode main section {
+      background-color: #333; /* Darker background for sections in dark mode */
+      border-color: #444; /* Lighter border in dark mode for contrast */
+    }
+    body.dark-mode a,
+    body.dark-mode a:hover,
+    body.dark-mode a:focus,
+    body.dark-mode a:active {
+      color: #88C0D0; /* Ensures that links are visible in dark mode */
+    }
+
+    body.dark-mode main section h2 {
+      color: #88C0D0; /* Lighter color for the heading in dark mode for visibility */
+    }
+
+    body.dark-mode main section p {
+      color: #ccc; /* Lighter color for the text in dark mode for visibility */
+    }
+    body.dark-mode footer {
+      background-color: #333; /* Dark background for footer */
+      color: #88C0D0;
+    }
 
 /* Footer styles */
 footer {
@@ -216,23 +225,20 @@ footer p {
 </body>
 
 <main class="main-content">
-  <div class="content-section">
-    <div class="image-block">
-      <img src="guru ramdas ji.PNG" alt="Guru ramdas Ji">
-    </div>
-    <div class="text-block">
-      <h2>Guru Ramdas Ji</h2>
-      <p> The fourth Guru of Sikhism, Guru Ram Das (1534–1581), was crucial in establishing the religious and structural framework of Amritsar as well as in defining and structuring the customs of the Sikh community. His birth name was Jetha; he was sent to Goindval, where he was initiated into the community by Guru Amar Das, the third Guru, and finally wed Bibi Bhani, his daughter. He became the next Guru as a result of his great commitment to and service to Guru Amar Das. One of his greatest accomplishments as a Guru was founding the city of Amritsar. He built the sacred tank known as the Amritsar Sarovar, which would eventually serve as the focal point of the Golden Temple, or Harmandir Sahib. He created a grid system for the streets and attracted traders and craftspeople to establish themselves around the tank, which aided in Amritsar's development into a thriving metropolis. </p>
-      <p> By extending the masand system, Guru Ram Das greatly improved the foundation for Sikh practice. This technique aided in the more efficient dissemination of Sikh teachings throughout the area in addition to aiding with administrative administration. Dasvandh, a kind of tithe, was collected by masons and used to fund Sikh institutions and community service projects. Guru Ram Das wrote 638 hymns as part of his spiritual contributions, one of which being the well-known Laava, or four stanzas, that are a part of the Anand Karaj, the Sikh marriage rite. His songs are still a vital part of Sikh prayer and ceremonies, including in the Guru Granth Sahib. His teachings placed a strong emphasis on the qualities of humility, service, and devotion to God. </p>
-      <p> Through the establishment of yearly Sikh meetings at Goindval, which served as the model for the bigger gatherings that are currently conducted on significant Sikh festivals at Amritsar, Guru Ram Das further reinforced the institutional and communal framework of Sikhism. The Sikh community's sense of belonging and solidarity was greatly enhanced by these get-togethers. Arjan, his youngest son, was named the next Guru by him. He carried on his work and finally put together the Adi Granth, the first formal compilation of Sikh literature. Guru Ram Das established a strong basis for the development of Sikhism as a unique religious and cultural identity with these endeavours. Sikhs all throughout the world are still motivated by his teachings, and his legacy is revered. </p>
-      <p> His predecessor, Guru Amar Das (1479–1574), was also a pivotal role in Sikh history. The organisation and procedures of the community underwent a dramatic change under his direction. Sikhism started to take on a more systematic shape under his direction. The foundation of manjis was essential for controlling the increasing number of adherents and guaranteeing the efficient and consistent propagation of Sikhism's teachings. He brought significant Sikh holidays and customs that are being observed today, which support the community's identity and religious devotion. The baoli, the holy well he had excavated at Goindval, represented the new and alive core of Guru Nanak's teachings and provided the Sikhs with both a physical and spiritual hub.</p>
-      <p> Guru Amar Das promoted the langar, or communal kitchen, where individuals of all socioeconomic classes may eat together, demonstrating his emphasis on equality and community service. This approach challenged the then-dominant caste distinctions, which was innovative. The establishment and consolidation of Sikh practices and community organisation by the Gurus played a crucial role in the transformation of Sikhism from an emerging spiritual movement into a distinct religious community. The identity and survival of Sikhism are inextricably linked to their legacies. </p>
-    </div>
-  </div>
-
-
+  <section class="content-section">
+      <div class="image-block">
+          <img src="guru ramdas ji.PNG" alt="Guru Ramdas Ji">
+      </div>
+      <div class="text-block">
+          <h2>Guru Ramdas Ji</h2>
+          <p> The fourth Guru of Sikhism, Guru Ram Das (1534–1581), was crucial in establishing the religious and structural framework of Amritsar as well as in defining and structuring the customs of the Sikh community. His birth name was Jetha; he was sent to Goindval, where he was initiated into the community by Guru Amar Das, the third Guru, and finally wed Bibi Bhani, his daughter. He became the next Guru as a result of his great commitment to and service to Guru Amar Das. One of his greatest accomplishments as a Guru was founding the city of Amritsar. He built the sacred tank known as the Amritsar Sarovar, which would eventually serve as the focal point of the Golden Temple, or Harmandir Sahib. He created a grid system for the streets and attracted traders and craftspeople to establish themselves around the tank, which aided in Amritsar's development into a thriving metropolis. </p>
+          <p> By extending the masand system, Guru Ram Das greatly improved the foundation for Sikh practice. This technique aided in the more efficient dissemination of Sikh teachings throughout the area in addition to aiding with administrative administration. Dasvandh, a kind of tithe, was collected by masons and used to fund Sikh institutions and community service projects. Guru Ram Das wrote 638 hymns as part of his spiritual contributions, one of which being the well-known Laava, or four stanzas, that are a part of the Anand Karaj, the Sikh marriage rite. His songs are still a vital part of Sikh prayer and ceremonies, including in the Guru Granth Sahib. His teachings placed a strong emphasis on the qualities of humility, service, and devotion to God. </p>
+          <p> Through the establishment of yearly Sikh meetings at Goindval, which served as the model for the bigger gatherings that are currently conducted on significant Sikh festivals at Amritsar, Guru Ram Das further reinforced the institutional and communal framework of Sikhism. The Sikh community's sense of belonging and solidarity was greatly enhanced by these get-togethers. Arjan, his youngest son, was named the next Guru by him. He carried on his work and finally put together the Adi Granth, the first formal compilation of Sikh literature. Guru Ram Das established a strong basis for the development of Sikhism as a unique religious and cultural identity with these endeavours. Sikhs all throughout the world are still motivated by his teachings, and his legacy is revered. </p>
+          <p> His predecessor, Guru Amar Das (1479–1574), was also a pivotal role in Sikh history. The organisation and procedures of the community underwent a dramatic change under his direction. Sikhism started to take on a more systematic shape under his direction. The foundation of manjis was essential for controlling the increasing number of adherents and guaranteeing the efficient and consistent propagation of Sikhism's teachings. He brought significant Sikh holidays and customs that are being observed today, which support the community's identity and religious devotion. The baoli, the holy well he had excavated at Goindval, represented the new and alive core of Guru Nanak's teachings and provided the Sikhs with both a physical and spiritual hub.</p>
+          <p> Guru Amar Das promoted the langar, or communal kitchen, where individuals of all socioeconomic classes may eat together, demonstrating his emphasis on equality and community service. This approach challenged the then-dominant caste distinctions, which was innovative. The establishment and consolidation of Sikh practices and community organisation by the Gurus played a crucial role in the transformation of Sikhism from an emerging spiritual movement into a distinct religious community. The identity and survival of Sikhism are inextricably linked to their legacies. </p>      </div>
+  </section>
 </main>
-  
+
   <footer>
     <p>&copy; 2024 Sikhi Waheguru. All Rights Reserved.</p>
   </footer>

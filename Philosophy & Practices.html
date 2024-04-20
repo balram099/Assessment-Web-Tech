@@ -5,7 +5,12 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Sikhi Waheguru</title>
   <style>
-*
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
 body {
   font-family: Arial, sans-serif;
   background-color: #f5f4f4;
@@ -82,7 +87,6 @@ nav a {
   padding: 10px 20px;
   background-color: #f5f4f4;
 }
-
 /* Main content and sections */
 main {
   padding: 20px; /* Padding around the main content */
@@ -125,43 +129,53 @@ main {
   margin: 0 auto;
 }
 
-/* Headings and media queries */
-h2 {
-  font-size: 1.5rem;
-  margin-bottom: 0.5rem;
-}
 
-@media (max-width: 768px) {
-  .image-block img {
-    max-height: 200px;
-  }
-}
+/* Dark Mode Styles */
+body.dark-mode {
+      background-color: #121212; /* Dark background for the body */
+    }
 
-/* Dark Mode adjustments */
-.dark-mode {
-  background-color: #121212;
-  color: #ffffff;
-}
+    body.dark-mode header,
+    body.dark-mode .breadcrumb {
+      background-color: #333; /* Darker header background */
+    }
 
-.dark-mode header,
-.dark-mode footer {
-  background-color: #333;
-  color: #88C0D0;
-}
+    body.dark-mode nav a {
+      background-color: #555;
+    }
 
-.dark-mode main,
-.dark-mode nav a,
-.dark-mode .search-container input[type="search"],
-.dark-mode .search-container button,
-.dark-mode a,
-.dark-mode .content-title,
-.dark-mode .text-block h2 {
-  background-color: #000000;
-  color: #88C0D0;
-}
-.dark-mode .text-block { /* For any text inside text-block */
-  color: #ffffff; /* Set text color to white */
-}
+    body.dark-mode .search-container input[type="search"],
+    body.dark-mode .search-container button {
+      border-color: #777;
+      background-color: #555;
+      color: #88C0D0;
+    }
+    body.dark-mode main {
+      background-color: #121212; /* Darker background for the main content in dark mode */
+    }
+
+    body.dark-mode main section {
+      background-color: #333; /* Darker background for sections in dark mode */
+      border-color: #444; /* Lighter border in dark mode for contrast */
+    }
+    body.dark-mode a,
+    body.dark-mode a:hover,
+    body.dark-mode a:focus,
+    body.dark-mode a:active {
+      color: #88C0D0; /* Ensures that links are visible in dark mode */
+    }
+
+    body.dark-mode main section h2 {
+      color: #88C0D0; /* Lighter color for the heading in dark mode for visibility */
+    }
+
+    body.dark-mode main section p {
+      color: #ccc; /* Lighter color for the text in dark mode for visibility */
+    }
+    body.dark-mode footer {
+      background-color: #333; /* Dark background for footer */
+      color: #88C0D0;
+    }
 
 /* Footer styles */
 footer {
@@ -210,54 +224,54 @@ footer p {
     </div>
   </body>
 
-<main class="main-content">
-    <div class="content-section">
-        <div class="image-block">
-            <img src="Khanda1.png" alt="Philosophy and Practices">
-        </div>
-        <div class="text-block">
-            <h2>Sikh Philosophy</h2>
-            <p>Sikhism, founded in the 15th century by Guru Nanak in the Punjab region, teaches the oneness of an eternal God and is based on the teachings of ten Gurus, encapsulated within the revered Guru Granth Sahib. This philosophy emphasizes the equality of all humans, rejecting discrimination based on caste, creed, or gender, and promotes living an ethical life of honesty, hard work, and community service. Sikhs are encouraged to lead lives that balance spiritual pursuits with worldly responsibilities, embodying the virtues of selflessness and service through practices like Langar, the communal meal served to all visitors of Sikh temples (Gurdwaras), irrespective of their background.</p>
-            <p>At the heart of Sikhism is the Guru Granth Sahib, which contains hymns and poetry that advocate for devotion to God, moral integrity, and social justice. It guides followers to practice remembrance of God, earn a living through honest means, and share with the less fortunate, fostering a sense of community and universal brotherhood. The Sikh tradition, with its rich history of standing up against oppression and advocating for human rights, inspires adherents to contribute positively to society and the world at large, striving for a harmonious existence that transcends mere tolerance to embrace deep respect and love for all.</p>
-        </div>
-    </div>
-
-    <div class="content-section">
-        <div class="text-block">
-            <h2>The Three Pillars of Sikhism</h2>
-            <p>The Three Pillars of Sikhism are fundamental principles that guide the lives of Sikhs towards spiritual and moral living. The first pillar, Naam Japna, emphasizes the importance of keeping God in mind at all times. It suggests that by remembering and meditating on God's name, individuals can develop a deeper spiritual connection and find true fulfillment in life. This practice encourages a continual awareness of the divine, guiding Sikhs to live in a state of constant remembrance and devotion to God.</p>
-            <p>The second and third pillars, Kirat Karni and Vand Chakna focus on ethical living and community welfare. Kirat Karni advocates for earning one's livelihood through honest and hard work. It teaches that living a life of integrity and positively contributing to society is crucial. Vand Chakna, on the other hand, underscores the importance of sharing with those in need. It promotes a spirit of generosity, ensuring that no one in the community is left wanting. Together, these pillars form the foundation of Sikhism, encouraging followers to lead lives that are spiritually connected, ethically grounded, and community-oriented.</p>
-        </div>
-    </div>
+  <main class="main-content">
+    <section class="content-section">
+      <div class="image-block">
+        <img src="Khanda1.png" alt="Philosophy and Practices">
+      </div>
+      <div class="text-block">
+        <h2>Sikh Philosophy</h2>
+        <p>Sikhism, founded in the 15th century by Guru Nanak in the Punjab region, teaches the oneness of an eternal God and is based on the teachings of ten Gurus, encapsulated within the revered Guru Granth Sahib. This philosophy emphasizes the equality of all humans, rejecting discrimination based on caste, creed, or gender, and promotes living an ethical life of honesty, hard work, and community service. Sikhs are encouraged to lead lives that balance spiritual pursuits with worldly responsibilities, embodying the virtues of selflessness and service through practices like Langar, the communal meal served to all visitors of Sikh temples (Gurdwaras), irrespective of their background.</p>
+        <p>At the heart of Sikhism is the Guru Granth Sahib, which contains hymns and poetry that advocate for devotion to God, moral integrity, and social justice. It guides followers to practice remembrance of God, earn a living through honest means, and share with the less fortunate, fostering a sense of community and universal brotherhood. The Sikh tradition, with its rich history of standing up against oppression and advocating for human rights, inspires adherents to contribute positively to society and the world at large, striving for a harmonious existence that transcends mere tolerance to embrace deep respect and love for all.</p>
+      </div>
+    </section>
   
-    <div class="content-section">
-        <div class="text-block">
-            <h2>The Five Ks</h2>
-            <p>The Five Ks are special symbols worn by baptized Sikhs that each represent an important part of their faith and way of life. These items include Kesh, which is keeping their hair uncut to show respect for the natural way of life Kara, a steel bracelet that reminds them of eternity and their connection to God Kanga, a wooden comb that represents cleanliness and the importance of looking after oneself Kachera, cotton undergarments that signify self-control and modesty and Kirpan, a ceremonial sword that symbolizes a Sikh's duty to stand up against injustice and protect everyone, regardless of their background.</p>
-            <p>These Five Ks are not just items of clothing or accessories but carry deep meanings. The Kesh shows a commitment to live naturally and respect the body God has given. The Kara is a constant reminder of the Sikh's bond with their community and God, representing an unbreakable connection. The Kanga encourages cleanliness, which is essential in their faith. The Kachera represents a life of discipline and control, important for spiritual growth. Lastly, the Kirpan emphasizes the responsibility to protect the innocent and fight against wrongs, showing their commitment to justice and righteousness. Together, these symbols form a core part of a Sikh's identity, reminding them of their beliefs and duties every day.</p>
-        </div>
-        <div class="image-block">
-            <img src="The 5.png" alt="The Five Ks">
-        </div>
-    </div>
+    <section class="content-section">
+      <div class="text-block">
+        <h2>The Three Pillars of Sikhism</h2>
+        <p>The Three Pillars of Sikhism are fundamental principles that guide the lives of Sikhs towards spiritual and moral living. The first pillar, Naam Japna, emphasizes the importance of keeping God in mind at all times. It suggests that by remembering and meditating on God's name, individuals can develop a deeper spiritual connection and find true fulfillment in life. This practice encourages a continual awareness of the divine, guiding Sikhs to live in a state of constant remembrance and devotion to God.</p>
+        <p>The second and third pillars, Kirat Karni and Vand Chakna focus on ethical living and community welfare. Kirat Karni advocates for earning one's livelihood through honest and hard work. It teaches that living a life of integrity and positively contributing to society is crucial. Vand Chakna, on the other hand, underscores the importance of sharing with those in need. It promotes a spirit of generosity, ensuring that no one in the community is left wanting. Together, these pillars form the foundation of Sikhism, encouraging followers to lead lives that are spiritually connected, ethically grounded, and community-oriented.</p>
+      </div>
+    </section>
   
-    <div class="content-section">
-        <div class="text-block">
-            <h2>Beliefs</h2>
-            <p>Sikhism, a religion founded in the Punjab region of India, deeply values ethical living and moral conduct. It encourages its followers to lead lives filled with honesty, compassion, and humility. Sikhs are taught to treat everyone equally, without regard to caste distinctions, which were prevalent in India. This principle promotes a sense of fairness and unity among people, emphasizing that everyone should be treated with respect and kindness. The religion teaches its adherents to strive for a high moral standard in all aspects of their lives, making ethics a central part of their daily routine.</p>
-            <p>Sikhism advocates for a society where individuals act with integrity and a strong sense of morality. It believes that by embodying these virtues, people can create a just and equitable community. Sikhs are encouraged to reject selfishness and embrace a life of service to others, which includes helping those in need and standing up for justice. Through such teachings, Sikhism aims to foster a world where fairness, equality, and compassion prevail, guiding individuals towards leading meaningful and ethical lives.</p>
-        </div>
-    </div>
-
-    <div class="content-section">
-        <div class="text-block">
-            <h2>Kirtan</h2>
-            <p>Kirtan is a special way Sikhs express their faith, where they sing hymns from their holy book, the Guru Granth Sahib. This isn't just any kind of singing; it's a form of worship that is very meaningful to them. Imagine singing your favourite song but in a way that also brings you closer to what you believe in. That's what Kirtan is like for Sikhs. They often use musical instruments like the harmonium, which is a type of keyboard, and the tabla, a kind of drum, to make the music even more beautiful.</p>
-            <p>The reason music and poetry are so important in Sikh worship is that they believe these are gifts from the divine that can help lift and purify the soul. It's like how a good song can make you feel better when you're sad for Sikhs, these spiritual songs do even more by helping them feel closer to the divine. By combining music with the powerful words of their Gurus, Kirtan becomes a way to connect deeply with their faith and with each other.</p>
-        </div>
-    </div>
-    
+    <section class="content-section">
+      <div class="text-block">
+        <h2>The Five Ks</h2>
+        <p>The Five Ks are special symbols worn by baptized Sikhs that each represent an important part of their faith and way of life. These items include Kesh, which is keeping their hair uncut to show respect for the natural way of life Kara, a steel bracelet that reminds them of eternity and their connection to God Kanga, a wooden comb that represents cleanliness and the importance of looking after oneself Kachera, cotton undergarments that signify self-control and modesty and Kirpan, a ceremonial sword that symbolizes a Sikh's duty to stand up against injustice and protect everyone, regardless of their background.</p>
+        <p>These Five Ks are not just items of clothing or accessories but carry deep meanings. The Kesh shows a commitment to live naturally and respect the body God has given. The Kara is a constant reminder of the Sikh's bond with their community and God, representing an unbreakable connection. The Kanga encourages cleanliness, which is essential in their faith. The Kachera represents a life of discipline and control, important for spiritual growth. Lastly, the Kirpan emphasizes the responsibility to protect the innocent and fight against wrongs, showing their commitment to justice and righteousness. Together, these symbols form a core part of a Sikh's identity, reminding them of their beliefs and duties every day.</p>
+      </div>
+      <div class="image-block">
+        <img src="The 5.png" alt="The Five Ks">
+      </div>
+    </section>
+  
+    <section class="content-section">
+      <div class="text-block">
+        <h2>Beliefs</h2>
+        <p>Sikhism, a religion founded in the Punjab region of India, deeply values ethical living and moral conduct. It encourages its followers to lead lives filled with honesty, compassion, and humility. Sikhs are taught to treat everyone equally, without regard to caste distinctions, which were prevalent in India. This principle promotes a sense of fairness and unity among people, emphasizing that everyone should be treated with respect and kindness. The religion teaches its adherents to strive for a high moral standard in all aspects of their lives, making ethics a central part of their daily routine.</p>
+        <p>Sikhism advocates for a society where individuals act with integrity and a strong sense of morality. It believes that by embodying these virtues, people can create a just and equitable community. Sikhs are encouraged to reject selfishness and embrace a life of service to others, which includes helping those in need and standing up for justice. Through such teachings, Sikhism aims to foster a world where fairness, equality, and compassion prevail, guiding individuals towards leading meaningful and ethical lives.</p>
+      </div>
+    </section>
+  
+    <section class="content-section">
+      <div class="text-block">
+        <h2>Kirtan</h2>
+        <p>Kirtan is a special way Sikhs express their faith, where they sing hymns from their holy book, the Guru Granth Sahib. This isn't just any kind of singing; it's a form of worship that is very meaningful to them. Imagine singing your favourite song but in a way that also brings you closer to what you believe in. That's what Kirtan is like for Sikhs. They often use musical instruments like the harmonium, which is a type of keyboard, and the tabla, a kind of drum, to make the music even more beautiful.</p>
+        <p>The reason music and poetry are so important in Sikh worship is that they believe these are gifts from the divine that can help lift and purify the soul. It's like how a good song can make you feel better when you're sad for Sikhs, these spiritual songs do even more by helping them feel closer to the divine. By combining music with the powerful words of their Gurus, Kirtan becomes a way to connect deeply with their faith and with each other.</p>
+      </div>
+    </section>
   </main>
+  
   
   
   <footer>

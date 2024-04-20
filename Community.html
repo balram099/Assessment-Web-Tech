@@ -92,17 +92,19 @@ nav a {
 
 /* Main content and sections */
 main {
-  padding: 20px;
-  background-color: #ffebcd;
-  border: 1px solid #003366;
-  border-radius: 8px;
+    padding: 20px; /* Padding around the main content */
+    background-color: #ffffff; /* Light background for the content area */
+    transition: background-color 0.3s; /* Smooth transition for dark mode */
 }
 
-.content-section {
-  margin-bottom: 2em;
-  padding-bottom: 20px;
-  position: relative;
-}
+  main section {
+    margin-bottom: 2em; /* Space between sections */
+    padding: 20px; /* Padding inside each section */
+    background-color: #ffebcd; /* Light orange background for each section */
+    border: 1px solid #003366; /* Dark blue border */
+    border-radius: 8px; /* Rounded corners for the sections */
+    transition: background-color 0.3s, border-color 0.3s; /* Smooth transitions for dark mode */
+  }
 
 .content-title {
   text-align: left;

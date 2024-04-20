@@ -90,16 +90,19 @@ nav a {
 
 /* Main content and sections */
 main {
-  padding: 20px;
-  background-color: #ffebcd;
-  border: 1px solid #003366;
-  border-radius: 8px;
+  padding: 20px; /* Padding around the main content */
+  background-color: #ffffff; /* Light background for the content area */
+  transition: background-color 0.3s; /* Smooth transition for dark mode */
+  border-radius: 8px; /* Same as your previous border-radius value */
 }
 
 .content-section {
   margin-bottom: 2em;
   padding-bottom: 20px;
   position: relative;
+  background-color: #ffebcd; /* Inherits the background color from main */
+  border: 1px solid #003366; /* Solid border with a specified width and color */
+  border-radius: inherit; /* Inherits the border-radius from main */
 }
 
 .content-title {
@@ -139,10 +142,9 @@ h2 {
   }
 }
 
-/* Dark Mode adjustments */
-.dark-mode {
-  background-color: #121212;
-  color: #ffffff;
+/* Dark Mode */
+body.dark-mode {
+  background-color: #121212; /* Dark background for the body */
 }
 
 .dark-mode header,
@@ -152,6 +154,7 @@ h2 {
 }
 
 .dark-mode main,
+.dark-mode .content-section,
 .dark-mode nav a,
 .dark-mode .search-container input[type="search"],
 .dark-mode .search-container button,
@@ -164,7 +167,6 @@ h2 {
 .dark-mode .text-block { /* For any text inside text-block */
   color: #ffffff; /* Set text color to white */
 }
-
 /* Footer styles */
 footer {
   text-align: center;

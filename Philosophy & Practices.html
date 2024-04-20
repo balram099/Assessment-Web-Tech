@@ -5,14 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Sikhi Waheguru</title>
   <style>
-    /* CSS Reset to remove default browser styling */
-/* CSS Reset to remove default browser styling */
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-
+*
 body {
   font-family: Arial, sans-serif;
   background-color: #f5f4f4;
@@ -92,16 +85,19 @@ nav a {
 
 /* Main content and sections */
 main {
-  padding: 20px;
-  background-color: #ffebcd;
-  border: 1px solid #003366;
-  border-radius: 8px;
+  padding: 20px; /* Padding around the main content */
+  background-color: #ffffff; /* Light background for the content area */
+  transition: background-color 0.3s; /* Smooth transition for dark mode */
+  border-radius: 8px; /* Same as your previous border-radius value */
 }
 
 .content-section {
   margin-bottom: 2em;
   padding-bottom: 20px;
   position: relative;
+  background-color: #ffebcd; /* Inherits the background color from main */
+  border: 1px solid #003366; /* Solid border with a specified width and color */
+  border-radius: inherit; /* Inherits the border-radius from main */
 }
 
 .content-title {
@@ -176,7 +172,6 @@ footer {
 
 footer p {
   margin: 0;
-  color: white;
 }
 
   </style>

@@ -244,8 +244,8 @@ body {
       }
     }
   
-    // Smooth Scrolling for Navigation Links
     document.addEventListener('DOMContentLoaded', function() {
+      // Smooth Scrolling for Navigation Links
       document.querySelectorAll('a[href^="#"]').forEach(anchor => {
         anchor.addEventListener('click', function(e) {
           e.preventDefault();
@@ -255,21 +255,46 @@ body {
         });
       });
   
-      // Content Filter/Search
-      const searchInput = document.getElementById('site-search');
+      const pages = [
+        { title: 'History of Sikhism', url: 'index.html' },
+        { title: 'The Gurus', url: 'The Gurus.html' },
+        { title: 'Philosophy & Practices', url: 'Philosophy & Practices.html' },
+        { title: 'Scriptures & Literature', url: 'Scriptures & Literature.html' },
+        { title: 'Community', url: 'Community.html' },
+        { title: 'Guru Nanak Dev Ji', url: 'Guru Nanak Dev Ji.html' },
+        { title: 'Guru Angad Dev Ji', url: 'Guru Angad Dev Ji.html' },
+        { title: 'Guru Amardas Ji', url: 'Guru Amardas Ji.html' },
+        { title: 'Guru Ram Das Ji', url: 'Guru Ram Das Ji.html' },
+        { title: 'Guru Arjan Dev Ji', url: 'Guru Arjan Dev Ji.html' },
+        { title: 'Guru Hargobind Sahib Ji', url: 'Guru Hargobind Sahib Ji.html' },
+        { title: 'Guru Har Rai Ji', url: 'Guru Har Rai Ji.html' },
+        { title: 'Guru Hari Krishen Ji', url: 'Guru Hari Krishen Ji.html' },
+        { title: 'Guru Tegh Bahadur Ji', url: 'Guru Tegh Bahadur Ji.html' },
+        { title: 'Guru Gobind Singh Ji', url: 'Guru Gobind Singh Ji.html' },
+        { title: 'Guru Granth Sahib Ji', url: 'Guru Granth Sahib Ji.html' }
+      ];
   
-      searchInput.addEventListener('keyup', function() {
-        const query = this.value.toUpperCase();
-        const contentSections = document.querySelectorAll('.main-content .content-section');
+      function search() {
+        var input = document.querySelector('.search-bar').value.toLowerCase().trim();
+        var queries = input.split(' '); // Split input into an array of keywords
+        const matchedPages = pages.filter(page => 
+            queries.every(query => page.title.toLowerCase().includes(query))
+        );
   
-        contentSections.forEach(section => {
-          const text = section.querySelector('.text-block').textContent || section.querySelector('.text-block').innerText;
-          if (text.toUpperCase().indexOf(query) > -1) {
-            section.style.display = "";
-          } else {
-            section.style.display = "none";
-          }
-        });
+        if (matchedPages.length > 0) {
+          // Redirect to the first matched page if multiple matches occur
+          window.location.href = matchedPages[0].url;
+        } else {
+          alert('No match found. Please try different keywords.');
+        }
+      }
+  
+      // Binding the search function to a button click or enter key press in the search bar
+      document.querySelector('.search-button').addEventListener('click', search);
+      document.querySelector('.search-bar').addEventListener('keypress', function(event) {
+        if (event.key === 'Enter') {
+          search();
+        }
       });
     });
   </script>

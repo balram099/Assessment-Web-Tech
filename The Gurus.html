@@ -94,19 +94,19 @@ nav a {
 
 /* Main Content Styling */
 main {
-      padding: 20px; /* Padding around the main content */
-      background-color: #ffffff; /* Light background for the content area */
-      transition: background-color 0.3s; /* Smooth transition for dark mode */
-    }
+  padding: 20px; /* Padding around the main content */
+  background-color: #ffffff; /* Light background for the content area */
+  transition: background-color 0.3s; /* Smooth transition for dark mode */
+}
 
-    main section {
-      margin-bottom: 2em; /* Space between sections */
-      padding: 20px; /* Padding inside each section */
-      background-color: #ffebcd; /* Light orange background for each section */
-      border: 1px solid #003366; /* Dark blue border */
-      border-radius: 8px; /* Rounded corners for the sections */
-      transition: background-color 0.3s, border-color 0.3s; /* Smooth transitions for dark mode */
-    }
+main section {
+  margin-bottom: 2em; /* Space between sections */
+  padding: 20px; /* Padding inside each section */
+  background-color: #ffebcd; /* Light orange background for each section */
+  border: 1px solid #003366; /* Dark blue border */
+  border-radius: 8px; /* Rounded corners for the sections */
+  transition: background-color 0.3s, border-color 0.3s; /* Smooth transitions for dark mode */
+}
 .main-content {
   display: flex;
   flex-wrap: wrap;
@@ -247,8 +247,8 @@ footer p {
     </nav>
 
     <div class="search-container">
-      <input type="search" id="site-search" name="q"
-             aria-label="Search through site content" placeholder="Search...">
+      <input type="text" class="search-bar" placeholder="Search...">
+      <button class="search-button">Search</button>
       <button onclick="search()">Q</button>
     </div>
 

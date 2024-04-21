@@ -52,128 +52,180 @@ body {
     }
 
     nav {
-      display: flex;
-    }
+  display: flex;
+  align-items: center; /* Centers items vertically in the navbar */
+}
+nav a, nav .dropdown .dropbtn {
+  text-decoration: none;
+  padding: 10px 20px; /* Consistent padding */
+  margin: 0 5px; /* Consistent margin */
+  background-color: #ff7b00;
+  color: white;
+  font-family: 'Roboto', sans-serif; /* Ensuring the font is consistent */
+  font-size: 1rem; /* Ensuring font size is consistent */
+  border-radius: 5px;
+  display: inline-block;
+  width: 150px; /* Example fixed width */
+  height: 53px;
+  text-align: center; /* Ensure text is centered if a width is set */
+}
 
-    nav a {
-      text-decoration: none;
-      color: white;
-      padding: 10px 20px;
-      margin: 0 10px;
-      background-color: #ff7b00;
-      border-radius: 5px; /* Rounded corners for buttons */
-    }
+/* Dropdown specific styles */
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
 
-    .search-container {
-      display: flex;
-      align-items: center;
-    }
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f9f9f9;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+}
 
-    .search-container input[type="search"] {
-      padding: 5px;
-      font-size: 1rem;
-      border: none;
-      border-radius: 5px;
-    }
+.dropdown-content a {
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block; /* Ensures that the links take up full width for the hover */
+  background-color: #ff7b00;
+  border-radius: 5px;
+}
 
-    .search-container button {
-      background: none;
-      border: 1px solid #fff;
-      color: #fff;
-      padding: 5px 10px;
-      margin-left: 5px;
-      border-radius: 5px;
-      cursor: pointer;
-    }
+.dropdown-content a:hover {
+  background-color: #3e8e41;
+}
 
-    /* Main Content styling */
-    main {
-      padding: 20px; /* Padding around the main content */
-      background-color: #ffffff; /* Light background for the content area */
-      transition: background-color 0.3s; /* Smooth transition for dark mode */
-    }
+.dropdown:hover .dropdown-content {
+  display: block;
+}
 
-    main section {
-      margin-bottom: 2em; /* Space between sections */
-      padding: 20px; /* Padding inside each section */
-      background-color: #ffebcd; /* Light orange background for each section */
-      border: 1px solid #003366; /* Dark blue border */
-      border-radius: 8px; /* Rounded corners for the sections */
-      transition: background-color 0.3s, border-color 0.3s; /* Smooth transitions for dark mode */
-    }
+.dropdown:hover .dropbtn {
+  background-color: #3e8e41; /* Color when hovered */
+}
 
-    main section h2 {
-      margin-bottom: 0.5em; /* Space below the heading */
-      color: #003366; /* Dark blue color for the heading */
-      font-size: 1.75rem; /* Size of the heading */
-      transition: color 0.3s; /* Smooth transition for dark mode */
-    }
+/* This ensures the dropdown doesn't affect the layout of other nav items */
+.dropdown {
+  vertical-align: top;
+}
+.search-container {
+  display: flex;
+  align-items: center;
+}
 
-    main section p {
-      font-size: 1rem; /* Size of the paragraph text */
-      line-height: 1.6; /* Line height for readability */
-      color: #333; /* Darker color for the text */
-      margin-bottom: 1em; /* Space between paragraphs */
-      transition: color 0.3s; /* Smooth transition for dark mode */
-    }
+.search-container input[type="search"] {
+  padding: 5px;
+  font-size: 1rem;
+  border: none;
+  border-radius: 5px;
+}
 
-    /* Dark Mode Styles */
-    body.dark-mode {
-      background-color: #121212; /* Dark background for the body */
-    }
+.search-container button {
+  background: none;
+  border: 1px solid #fff;
+  color: #fff;
+  padding: 5px 10px;
+  margin-left: 5px;
+  border-radius: 5px;
+  cursor: pointer;
+}
 
-    body.dark-mode header {
-      background-color: #333; /* Darker header background */
-    }
+/* Main Content styling */
+main {
+  padding: 20px; /* Padding around the main content */
+  background-color: #ffffff; /* Light background for the content area */
+  transition: background-color 0.3s; /* Smooth transition for dark mode */
+}
 
-    body.dark-mode nav a {
-      background-color: #555;
-    }
+main section {
+  margin-bottom: 2em; /* Space between sections */
+  padding: 20px; /* Padding inside each section */
+  background-color: #ffebcd; /* Light orange background for each section */
+  border: 1px solid #003366; /* Dark blue border */
+  border-radius: 8px; /* Rounded corners for the sections */
+  transition: background-color 0.3s, border-color 0.3s; /* Smooth transitions for dark mode */
+}
 
-    body.dark-mode .search-container input[type="search"],
-    body.dark-mode .search-container button {
-      border-color: #777;
-      background-color: #555;
-      color: #88C0D0;
-    }
-    body.dark-mode main {
-      background-color: #121212; /* Darker background for the main content in dark mode */
-    }
+main section h2 {
+  margin-bottom: 0.5em; /* Space below the heading */
+  color: #003366; /* Dark blue color for the heading */
+  font-size: 1.75rem; /* Size of the heading */
+  transition: color 0.3s; /* Smooth transition for dark mode */
+}
 
-    body.dark-mode main section {
-      background-color: #333; /* Darker background for sections in dark mode */
-      border-color: #444; /* Lighter border in dark mode for contrast */
-    }
-    body.dark-mode a,
-    body.dark-mode a:hover,
-    body.dark-mode a:focus,
-    body.dark-mode a:active {
-      color: #88C0D0; /* Ensures that links are visible in dark mode */
-    }
+main section p {
+  font-size: 1rem; /* Size of the paragraph text */
+  line-height: 1.6; /* Line height for readability */
+  color: #333; /* Darker color for the text */
+  margin-bottom: 1em; /* Space between paragraphs */
+  transition: color 0.3s; /* Smooth transition for dark mode */
+}
 
-    body.dark-mode main section h2 {
-      color: #88C0D0; /* Lighter color for the heading in dark mode for visibility */
-    }
+/* Dark Mode Styles */
+body.dark-mode {
+  background-color: #121212; /* Dark background for the body */
+}
 
-    body.dark-mode main section p {
-      color: #ccc; /* Lighter color for the text in dark mode for visibility */
-    }
-    body.dark-mode footer {
-      background-color: #333; /* Dark background for footer */
-      color: #88C0D0;
-    }
+body.dark-mode header {
+  background-color: #333; /* Darker header background */
+}
 
-    footer {
-      text-align: center; /* Center align footer content */
-      padding: 10px;
-      background-color: #ff7b00; /* Orange footer background */
-    }
-    footer p {
-      margin: 0; /* Remove default paragraph margin */
-    }
+body.dark-mode nav a,
+body.dark-mode .dropdown .dropbtn {
+  background-color: #555; /* Dark background for buttons */
+  color: #88C0D0; /* Light text color for visibility */
+}
+
+body.dark-mode .search-container input[type="search"],
+body.dark-mode .search-container button {
+  border-color: #777;
+  background-color: #555;
+  color: #88C0D0;
+}
+
+body.dark-mode main {
+  background-color: #121212; /* Darker background for the main content in dark mode */
+}
+
+body.dark-mode main section {
+  background-color: #333; /* Darker background for sections in dark mode */
+  border-color: #444; /* Lighter border in dark mode for contrast */
+}
+body.dark-mode a,
+body.dark-mode a:hover,
+body.dark-mode a:focus,
+body.dark-mode a:active {
+  color: #88C0D0; /* Ensures that links are visible in dark mode */
+}
+
+body.dark-mode main section h2 {
+  color: #88C0D0; /* Lighter color for the heading in dark mode for visibility */
+}
+
+body.dark-mode main section p {
+  color: #ccc; /* Lighter color for the text in dark mode for visibility */
+}
+
+body.dark-mode footer {
+  background-color: #333; /* Dark background for footer */
+  color: #88C0D0;
+}
+
+footer {
+  text-align: center; /* Center align footer content */
+  padding: 10px;
+  background-color: #ff7b00; /* Orange footer background */
+}
+
+footer p {
+  margin: 0; /* Remove default paragraph margin */
+}
 
   </style>
 </head>
+
 <body>
   <header>
     <a href="index.html">
@@ -185,9 +237,25 @@ body {
     <a href="index.html" class="site-title-link">
       <div class="site-title">Sikhi Waheguru</div>
     </a>
+
     <nav>
       <a href="index.html">History of Sikhism</a>
-      <a href="The Gurus.html">The Gurus</a>
+      <div class="dropdown">
+        <a href="The Gurus.html" class="dropbtn">The Gurus</a>
+        <div class="dropdown-content">
+          <a href="Guru Nanak Dev Ji.html">Guru Nanak Dev Ji</a>
+          <a href="Guru Angad Dev Ji.html">Guru Angad Dev Ji</a>
+          <a href="Guru Amardas Ji.html">Guru Amardas Ji</a>
+          <a href="Guru Ram Das Ji.html">Guru Ram Das Ji</a>
+          <a href="Guru Arjan Dev Ji.html">Guru Arjan Dev Ji</a>
+          <a href="Guru Hargobind Sahib Ji.html">Guru Hargobind Sahib Ji</a>
+          <a href="Guru Har Rai Ji.html">Guru Har Rai Ji</a>
+          <a href="Guru Hari Krishen Ji.html">Guru Hari Krishen Ji</a>
+          <a href="Guru Tegh Bahadur Ji.html">Guru Tegh Bahadur Ji</a>
+          <a href="Guru Gobind Singh Ji.html">Guru Gobind Singh Ji</a>
+          <a href="Guru Granth Sahib Ji.html">Guru Granth Sahib Ji</a>
+        </div>
+      </div>
       <a href="Philosophy & Practices.html">Philosophy & Practices</a>
       <a href="Scriptures & Literature.html">Scriptures & Literature</a>
       <a href="Community.html">Community</a>

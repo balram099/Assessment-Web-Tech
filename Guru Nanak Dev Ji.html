@@ -4,22 +4,28 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Sikhi Waheguru</title>
+  <!-- connect to Google Fonts for performance improvement -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <!-- Import Roboto font from Google Fonts -->
   <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
   <style>
+
+/* Global settings */
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
+/* Body styling */
 body {
   font-family: 'Roboto', sans-serif;
   background-color: #f5f4f4;
   transition: background-color 0.3s;
 }
 
+/* Header styling */
 header {
   display: flex;
   align-items: center;
@@ -29,6 +35,7 @@ header {
   color: white;
 }
 
+/* Site title styling */
 .site-title {
   margin-right: 20px;
   font-size: 1.8rem;
@@ -36,11 +43,13 @@ header {
   color: #ffffff;
 }
 
+/* Link styling */
 a, a:hover, a:focus, a:active {
   text-decoration: none;
   color: inherit;
 }
 
+/* Logo styling */
 #logo {
   width: 100px;
   height: 50px;
@@ -51,26 +60,27 @@ a, a:hover, a:focus, a:active {
   max-height: 100%;
 }
 
+/* Navigation styling */
 nav {
   display: flex;
-  align-items: center; /* Centers items vertically in the navbar */
+  align-items: center; 
 }
 nav a, nav .dropdown .dropbtn {
   text-decoration: none;
-  padding: 10px 20px; /* Consistent padding */
-  margin: 0 5px; /* Consistent margin */
+  padding: 10px 20px; 
+  margin: 0 5px; 
   background-color: #ff7b00;
   color: white;
-  font-family: 'Roboto', sans-serif; /* Ensuring the font is consistent */
-  font-size: 1rem; /* Ensuring font size is consistent */
+  font-family: 'Roboto', sans-serif; 
+  font-size: 1rem; 
   border-radius: 5px;
   display: inline-block;
-  width: 150px; /* Example fixed width */
+  width: 150px; 
   height: 53px;
-  text-align: center; /* Ensure text is centered if a width is set */
+  text-align: center; 
 }
 
-/* Dropdown specific styles */
+/* Dropdown menu styling */
 .dropdown {
   position: relative;
   display: inline-block;
@@ -88,7 +98,7 @@ nav a, nav .dropdown .dropbtn {
   color: black;
   padding: 12px 16px;
   text-decoration: none;
-  display: block; /* Ensures that the links take up full width for the hover */
+  display: block; 
   background-color: #ff7b00;
   border-radius: 5px;
 }
@@ -102,14 +112,10 @@ nav a, nav .dropdown .dropbtn {
 }
 
 .dropdown:hover .dropbtn {
-  background-color: #3e8e41; /* Color when hovered */
+  background-color: #3e8e41; 
 }
 
-/* This ensures the dropdown doesn't affect the layout of other nav items */
-.dropdown {
-  vertical-align: top;
-}
-
+/* Styles for search bar */
 .search-container {
   display: flex;
   align-items: center;
@@ -132,26 +138,27 @@ nav a, nav .dropdown .dropbtn {
   cursor: pointer;
 }
 
+/* Styles for breadcrumbs */
 .breadcrumb {
   padding: 10px 20px;
   background-color: #f5f4f4;
 }
-/* Main content and sections */
+
+/* Styles for main content */
 main {
-  padding: 20px; /* Padding around the main content */
-  background-color: #ffffff; /* Light background for the content area */
-  transition: background-color 0.3s; /* Smooth transition for dark mode */
-  border-radius: 8px; /* Same as your previous border-radius value */
+    padding: 20px; 
+    background-color: #ffffff; 
+    transition: background-color 0.3s; 
 }
 
-.content-section {
-  margin-bottom: 2em;
-  padding-bottom: 20px;
-  position: relative;
-  background-color: #ffebcd; /* Inherits the background color from main */
-  border: 1px solid #003366; /* Solid border with a specified width and color */
-  border-radius: inherit; /* Inherits the border-radius from main */
-}
+  main section {
+    margin-bottom: 2em; 
+    padding: 20px; 
+    background-color: #ffebcd; 
+    border: 1px solid #003366; 
+    border-radius: 8px; 
+    transition: background-color 0.3s, border-color 0.3s;
+  }
 
 .content-title {
   text-align: left;
@@ -178,119 +185,120 @@ main {
   margin: 0 auto;
 }
 
-/* Dark Mode Styles */
-body.dark-mode {
-  background-color: #121212; /* Dark background for the body */
+h2 {
+  font-size: 1.5rem;
+  margin-bottom: 0.5rem;
 }
 
-body.dark-mode header,
-body.dark-mode .breadcrumb {
-  background-color: #333; /* Darker header background */
+/* Dark mode styling for the body */
+body.dark-mode,
+body.dark-mode main {
+  background-color: #121212; 
 }
 
-body.dark-mode nav a,
-body.dark-mode .dropdown .dropbtn {
-  background-color: #555; /* Dark background for buttons */
-  color: #88C0D0; /* Light text color for visibility */
+body.dark-mode header, 
+body.dark-mode .breadcrumb, 
+body.dark-mode main section, 
+body.dark-mode footer {
+  background-color: #333;
 }
 
+/* Navigation, dropdowns, search, and links styling for dark mode */
+body.dark-mode nav a, body.dark-mode .dropdown .dropbtn,
+body.dark-mode .search-container input[type="search"],
+body.dark-mode .search-container button,
+body.dark-mode a, body.dark-mode a:hover, 
+body.dark-mode a:focus, body.dark-mode a:active,
+body.dark-mode main section h2, 
+body.dark-mode footer {
+  color: #88C0D0;
+}
+body.dark-mode nav a, body.dark-mode .dropdown .dropbtn, 
 body.dark-mode .search-container input[type="search"],
 body.dark-mode .search-container button {
-  border-color: #777;
   background-color: #555;
-  color: #88C0D0;
 }
 
-body.dark-mode main {
-  background-color: #121212; /* Darker background for the main content in dark mode */
-}
-
+/* Specific border color for searchable inputs and sections */
+body.dark-mode .search-container input[type="search"],
+body.dark-mode .search-container button,
 body.dark-mode main section {
-  background-color: #333; /* Darker background for sections in dark mode */
-  border-color: #444; /* Lighter border in dark mode for contrast */
+  border-color: #444;
 }
 
-body.dark-mode a,
-body.dark-mode a:hover,
-body.dark-mode a:focus,
-body.dark-mode a:active {
-  color: #88C0D0; /* Ensures that links are visible in dark mode */
-}
-
-body.dark-mode main section h2 {
-  color: #88C0D0; /* Lighter color for the heading in dark mode for visibility */
-}
-
+/* Styling for main content paragraphs */
 body.dark-mode main section p {
-  color: #ccc; /* Lighter color for the text in dark mode for visibility */
+  color: #ccc;
 }
 
-body.dark-mode footer {
-  background-color: #333; /* Dark background for footer */
-  color: #88C0D0;
-}
-
-/* Footer styles */
+/* Footer styling */
 footer {
   text-align: center;
   padding: 10px;
-  background-color: #ff7b00;
+  background-color: #ff7b00; 
 }
 
 footer p {
   margin: 0;
 }
+
 </style>
 </head>
 
 <body>
-  <header>
-    <a href="The Gurus.html">
-      <div id="logo">
-        <img src="Khanda3.png" alt="Khanda Logo" />
-      </div>
-    </a>
-
-    <a href="index.html" class="site-title-link">
-      <div class="site-title">Sikhi Waheguru</div>
-    </a>
-
-    <nav>
-      <a href="index.html">History of Sikhism</a>
-      <div class="dropdown">
-        <a href="The Gurus.html" class="dropbtn">The Gurus</a>
-        <div class="dropdown-content">
-          <a href="Guru Nanak Dev Ji.html">Guru Nanak Dev Ji</a>
-          <a href="Guru Angad Dev Ji.html">Guru Angad Dev Ji</a>
-          <a href="Guru Amardas Ji.html">Guru Amardas Ji</a>
-          <a href="Guru Ram Das Ji.html">Guru Ram Das Ji</a>
-          <a href="Guru Arjan Dev Ji.html">Guru Arjan Dev Ji</a>
-          <a href="Guru Hargobind Sahib Ji.html">Guru Hargobind Sahib Ji</a>
-          <a href="Guru Har Rai Ji.html">Guru Har Rai Ji</a>
-          <a href="Guru Hari Krishen Ji.html">Guru Hari Krishen Ji</a>
-          <a href="Guru Tegh Bahadur Ji.html">Guru Tegh Bahadur Ji</a>
-          <a href="Guru Gobind Singh Ji.html">Guru Gobind Singh Ji</a>
-          <a href="Guru Granth Sahib Ji.html">Guru Granth Sahib Ji</a>
+  <!-- Header section containing the website's navigation and branding elements -->
+    <header>
+      <!-- Link and logo serving as the home button -->
+      <a href="index.html">
+        <div id="logo">
+          <img src="Khanda3.png" alt="Khanda Logo" />
         </div>
-      </div>
-      <a href="Philosophy & Practices.html">Philosophy & Practices</a>
-      <a href="Scriptures & Literature.html">Scriptures & Literature</a>
-      <a href="Community.html">Community</a>
-    </nav>
+      </a>
+  
+      <!-- Website title, also links back to the homepage -->
+      <a href="index.html" class="site-title-link">
+        <div class="site-title">Sikhi Waheguru</div>
+      </a>
+  
+      <!-- Main navigation bar for the website -->
+      <nav>
+        <a href="index.html">History of Sikhism</a>
+        <div class="dropdown">
+          <a href="The Gurus.html" class="dropbtn">The Gurus</a>
+          <div class="dropdown-content">
+            <a href="Guru Nanak Dev Ji.html">Guru Nanak Dev Ji</a>
+            <a href="Guru Angad Dev Ji.html">Guru Angad Dev Ji</a>
+            <a href="Guru Amardas Ji.html">Guru Amardas Ji</a>
+            <a href="Guru Ram Das Ji.html">Guru Ram Das Ji</a>
+            <a href="Guru Arjan Dev Ji.html">Guru Arjan Dev Ji</a>
+            <a href="Guru Hargobind Sahib Ji.html">Guru Hargobind Sahib Ji</a>
+            <a href="Guru Har Rai Ji.html">Guru Har Rai Ji</a>
+            <a href="Guru Hari Krishen Ji.html">Guru Hari Krishen Ji</a>
+            <a href="Guru Tegh Bahadur Ji.html">Guru Tegh Bahadur Ji</a>
+            <a href="Guru Gobind Singh Ji.html">Guru Gobind Singh Ji</a>
+            <a href="Guru Granth Sahib Ji.html">Guru Granth Sahib Ji</a>
+          </div>
+        </div>
+        <a href="Philosophy & Practices.html">Philosophy & Practices</a>
+        <a href="Scriptures & Literature.html">Scriptures & Literature</a>
+        <a href="Community.html">Community</a>
+      </nav>
 
-    <div class="search-container">
-      <input type="text" class="search-bar" placeholder="Search...">
-      <button class="search-button">Search</button>
-      <button onclick="search()">Q</button>
+      <!-- search button, invoking search function -->
+      <div class="search-container">
+        <input type="text" class="search-bar" placeholder="Search...">
+        <button class="search-button">Search</button>
+        <button onclick="search()">Q</button>
+      </div>
+       <!-- Button to toggle dark mode, activates JavaScript function -->
+      <button class="dark-mode-toggle" onclick="toggleDarkMode()">🌙</button>
+    </header>
+     <!-- Breadcrumb navigation to provide a pathway back to previous pages -->
+    <div class="breadcrumb">
+      <a href="index.html">Home</a> > <a href="The Gurus.html">The Gurus</a> > <a href="Guru Nanak Dev Ji.html">Guru Nanak Dev Ji</a>
     </div>
 
-    <button class="dark-mode-toggle" onclick="toggleDarkMode()">🌙</button>
-  </header>
-
-  <div class="breadcrumb">
-    <a href="index.html">Home</a> > <a href="The Gurus.html">The Gurus</a> > <a href="Guru Nanak Dev Ji.html">Guru Nanak Dev Ji</a>
-  </div>
-</body>
+  </body>
 
 <main class="main-content">
   <section class="content-section">
@@ -306,79 +314,70 @@ footer p {
   </section>
 </main>
 
-  
-  <footer>
-    <p>&copy; 2024 Sikhi Waheguru. All Rights Reserved.</p>
-  </footer>
+<!--Footer -->>
+<footer>
+  <p>&copy; 2024 Sikhi Waheguru. All Rights Reserved.</p>
+</footer>
 
-  <script>
-    // Toggle dark mode and update the button icon
-    function toggleDarkMode() {
-      var body = document.body;
-      body.classList.toggle('dark-mode');
-      var toggleButton = document.querySelector('.dark-mode-toggle');
-      if (body.classList.contains('dark-mode')) {
-        toggleButton.textContent = '☀️'; // Sun icon for light mode
-      } else {
-        toggleButton.textContent = '🌙'; // Moon icon for dark mode
-      }
-    }
-  
-    document.addEventListener('DOMContentLoaded', function() {
-      // Smooth Scrolling for Navigation Links
-      document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-        anchor.addEventListener('click', function(e) {
-          e.preventDefault();
-          document.querySelector(this.getAttribute('href')).scrollIntoView({
-            behavior: 'smooth'
-          });
-        });
-      });
-  
-      const pages = [
-        { title: 'History of Sikhism', url: 'index.html' },
-        { title: 'The Gurus', url: 'The Gurus.html' },
-        { title: 'Philosophy & Practices', url: 'Philosophy & Practices.html' },
-        { title: 'Scriptures & Literature', url: 'Scriptures & Literature.html' },
-        { title: 'Community', url: 'Community.html' },
-        { title: 'Guru Nanak Dev Ji', url: 'Guru Nanak Dev Ji.html' },
-        { title: 'Guru Angad Dev Ji', url: 'Guru Angad Dev Ji.html' },
-        { title: 'Guru Amardas Ji', url: 'Guru Amardas Ji.html' },
-        { title: 'Guru Ram Das Ji', url: 'Guru Ram Das Ji.html' },
-        { title: 'Guru Arjan Dev Ji', url: 'Guru Arjan Dev Ji.html' },
-        { title: 'Guru Hargobind Sahib Ji', url: 'Guru Hargobind Sahib Ji.html' },
-        { title: 'Guru Har Rai Ji', url: 'Guru Har Rai Ji.html' },
-        { title: 'Guru Hari Krishen Ji', url: 'Guru Hari Krishen Ji.html' },
-        { title: 'Guru Tegh Bahadur Ji', url: 'Guru Tegh Bahadur Ji.html' },
-        { title: 'Guru Gobind Singh Ji', url: 'Guru Gobind Singh Ji.html' },
-        { title: 'Guru Granth Sahib Ji', url: 'Guru Granth Sahib Ji.html' }
-      ];
-  
-      function search() {
-        var input = document.querySelector('.search-bar').value.toLowerCase().trim();
-        var queries = input.split(' '); // Split input into an array of keywords
-        const matchedPages = pages.filter(page => 
-            queries.every(query => page.title.toLowerCase().includes(query))
-        );
-  
-        if (matchedPages.length > 0) {
-          // Redirect to the first matched page if multiple matches occur
-          window.location.href = matchedPages[0].url;
-        } else {
-          alert('No match found. Please try different keywords.');
-        }
-      }
-  
-      // Binding the search function to a button click or enter key press in the search bar
-      document.querySelector('.search-button').addEventListener('click', search);
-      document.querySelector('.search-bar').addEventListener('keypress', function(event) {
-        if (event.key === 'Enter') {
-          search();
-        }
+<script>
+  // Function to toggle dark mode on the website
+  function toggleDarkMode() {
+    document.body.classList.toggle('dark-mode');
+    document.querySelector('.dark-mode-toggle').textContent = document.body.classList.contains('dark-mode') ? '☀️' : '🌙';
+  }
+
+ // Event listener for DOM content loaded
+  document.addEventListener('DOMContentLoaded', function() {
+    // Event listeners for smooth scrolling on anchor links
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+      anchor.addEventListener('click', function(e) {
+        e.preventDefault();
+        document.querySelector(this.getAttribute('href')).scrollIntoView({ behavior: 'smooth' });
       });
     });
-  </script>
 
+    // Array of pages for search functionality
+    const pages = [
+      { title: 'History of Sikhism', url: 'index.html' },
+      { title: 'The Gurus', url: 'The Gurus.html' },
+      { title: 'Philosophy & Practices', url: 'Philosophy & Practices.html' },
+      { title: 'Scriptures & Literature', url: 'Scriptures & Literature.html' },
+      { title: 'Community', url: 'Community.html' },
+      { title: 'Guru Nanak Dev Ji', url: 'Guru Nanak Dev Ji.html' },
+      { title: 'Guru Angad Dev Ji', url: 'Guru Angad Dev Ji.html' },
+      { title: 'Guru Amardas Ji', url: 'Guru Amardas Ji.html' },
+      { title: 'Guru Ram Das Ji', url: 'Guru Ram Das Ji.html' },
+      { title: 'Guru Arjan Dev Ji', url: 'Guru Arjan Dev Ji.html' },
+      { title: 'Guru Hargobind Sahib Ji', url: 'Guru Hargobind Sahib Ji.html' },
+      { title: 'Guru Har Rai Ji', url: 'Guru Har Rai Ji.html' },
+      { title: 'Guru Hari Krishen Ji', url: 'Guru Hari Krishen Ji.html' },
+      { title: 'Guru Tegh Bahadur Ji', url: 'Guru Tegh Bahadur Ji.html' },
+      { title: 'Guru Gobind Singh Ji', url: 'Guru Gobind Singh Ji.html' },
+      { title: 'Guru Granth Sahib Ji', url: 'Guru Granth Sahib Ji.html' }
+    ];
+
+    // Function to handle search based on user input
+    function search() {
+      let input = document.querySelector('.search-bar').value.toLowerCase().trim();
+      let queries = input.split(' ');
+      const matchedPages = pages.filter(page => queries.every(query => page.title.toLowerCase().includes(query)));
+
+      if (matchedPages.length > 0) {
+        window.location.href = matchedPages[0].url;
+      } else {
+        alert('No match found. Please try different keywords.');
+      }
+    }
+
+    // Attach event listeners to search elements
+    document.querySelector('.search-button').addEventListener('click', search);
+    document.querySelector('.search-bar').addEventListener('keypress', function(event) {
+      if (event.key === 'Enter') {
+        search();
+      }
+    });
+  });
+</script>
+  </body>
+  </html>
   
-</body>
-</html>

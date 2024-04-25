@@ -220,41 +220,44 @@ main section {
 }
 
 /* Dark mode styling for the body */
-body.dark-mode {
-  background-color: #121212;
+body.dark-mode,
+body.dark-mode main {
+  background-color: #121212; 
 }
 
-/* Header and navigation styles in dark mode */
-body.dark-mode header,
-body.dark-mode .breadcrumb,
-body.dark-mode nav a,
-body.dark-mode .dropdown .dropbtn,
+body.dark-mode header, 
+body.dark-mode .breadcrumb, 
+body.dark-mode main section, 
+body.dark-mode footer {
+  background-color: #333;
+}
+
+/* Navigation, dropdowns, search, and links styling for dark mode */
+body.dark-mode nav a, body.dark-mode .dropdown .dropbtn,
+body.dark-mode .search-container input[type="search"],
+body.dark-mode .search-container button,
+body.dark-mode a, body.dark-mode a:hover, 
+body.dark-mode a:focus, body.dark-mode a:active,
+body.dark-mode main section h2, 
+body.dark-mode footer {
+  color: #88C0D0;
+}
+body.dark-mode nav a, body.dark-mode .dropdown .dropbtn, 
 body.dark-mode .search-container input[type="search"],
 body.dark-mode .search-container button {
-  background-color: #333; 
-  color: #88C0D0; 
+  background-color: #555;
 }
 
-/* Main content and sections in dark mode */
-body.dark-mode main,
+/* Specific border color for searchable inputs and sections */
+body.dark-mode .search-container input[type="search"],
+body.dark-mode .search-container button,
 body.dark-mode main section {
-  background-color: #121212; 
-  color: #ccc; 
   border-color: #444;
 }
 
-/* Footer styles in dark mode */
-body.dark-mode footer {
-  background-color: #333; 
-  color: #88C0D0; 
-}
-
-/* Enhancing link visibility across dark mode */
-body.dark-mode a,
-body.dark-mode a:hover,
-body.dark-mode a:focus,
-body.dark-mode a:active {
-  color: #88C0D0; 
+/* Styling for main content paragraphs */
+body.dark-mode main section p {
+  color: #ccc;
 }
 
 /* Footer styling */
@@ -327,6 +330,7 @@ footer p {
 
 
 <main class="main-content">
+  <!-- Section for Guru Nanak Dev Ji -->
   <section class="content-section">
     <div class="image-block">
       <a href="Guru Nanak Dev Ji.html">
@@ -338,6 +342,7 @@ footer p {
     </div>
   </section>
 
+  <!-- Section for Guru Angad Dev Ji -->
   <section class="content-section">
     <div class="text-block">
       <h2><a href="Guru Angad Dev Ji.html">Guru Angad Dev Ji</a></h2>
@@ -350,6 +355,7 @@ footer p {
     </div>
   </section>
 
+  <!-- Section for Guru Amardas Ji -->
   <section class="content-section">
     <div class="image-block">
       <a href="Guru Amardas Ji.html">
@@ -362,6 +368,7 @@ footer p {
     </div>
   </section>
 
+  <!-- Section for Guru Ram Das Ji -->
   <section class="content-section">
     <div class="text-block">
       <h2><a href="Guru Ram Das Ji.html">Guru Ram Das Ji</a></h2>
@@ -374,6 +381,7 @@ footer p {
     </div>
   </section>
 
+    <!-- Section for Guru Arjan Dev Ji -->
   <section class="content-section">
     <div class="image-block">
       <a href="Guru Arjan Dev Ji.html">
@@ -386,6 +394,7 @@ footer p {
     </div>
   </section>
 
+  <!-- Section for Guru Hargobind Sahib Ji -->
   <section class="content-section">
     <div class="text-block">
       <h2><a href="Guru Hargobind Sahib Ji.html">Guru Hargobind Sahib Ji</a></h2>
@@ -398,6 +407,7 @@ footer p {
     </div>
   </section>
 
+  <!-- Section for Guru Har Rai Ji -->
   <section class="content-section">
     <div class="image-block">
       <a href="Guru Har Rai Ji.html">
@@ -410,6 +420,7 @@ footer p {
     </div>
   </section>
 
+  <!-- Section for Guru Hari Krishen Ji -->
   <section class="content-section">
     <div class="text-block">
       <h2><a href="Guru Hari Krishen Ji.html">Guru Hari Krishen Ji</a></h2>
@@ -422,6 +433,7 @@ footer p {
     </div>
   </section>
 
+  <!-- Section for Guru Tegh Bahadur Sahib Ji -->
   <section class="content-section">
     <div class="image-block">
       <a href="Guru Tegh Bahadur Ji.html">
@@ -434,7 +446,7 @@ footer p {
     </div>
   </section>
 
-
+  <!-- Section for Guru Gobind Singh Ji -->
   <section class="content-section">
     <div class="text-block">
       <h2><a href="Guru Gobind Singh Ji.html">Guru Gobind Singh Ji</a></h2>
@@ -447,7 +459,7 @@ footer p {
     </div>
   </section>
 
-  
+  <!-- Section for Guru Granth Sahib Ji -->
   <section class="content-section">
     <div class="image-block">
       <a href="Guru Granth Sahib Ji.html">
